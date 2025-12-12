@@ -7,7 +7,7 @@ A fast, responsive developer portfolio built with Gatsby.js and React to showcas
 ## 🚀 Live Demo
 
 > ⏳ The Netlify deployment link will be added here after going live.  
-> Example: `https://nitin-bhatti-portfolio.netlify.app`
+> Example: `https://nitinbhatti-portfolio.netlify.app/`
 
 ---
 
