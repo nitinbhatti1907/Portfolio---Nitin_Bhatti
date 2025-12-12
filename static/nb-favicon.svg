@@ -1,0 +1,65 @@
+  <?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="64"
+  height="64"
+  viewBox="0 0 64 64">
+
+  <!-- dark tile background to match the site -->
+  <rect width="64" height="64" rx="14" ry="14" fill="#020617" />
+
+  <defs>
+    <!-- soft glow for the outer red ring -->
+    <filter id="nb-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#ef4444" flood-opacity="0.35" />
+    </filter>
+
+    <!-- mask so the ring tucks “behind” the letters a bit -->
+    <mask id="nb-mask">
+      <rect width="100%" height="100%" fill="white" />
+      <text
+        x="10" y="44"
+        font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-weight="900"
+        font-size="30"
+        letter-spacing="1"
+        fill="black">
+        NB
+      </text>
+    </mask>
+  </defs>
+
+  <!-- Saturn-style rings -->
+  <g mask="url(#nb-mask)">
+    <!-- red main ring -->
+    <ellipse
+      cx="38" cy="36" rx="30" ry="16"
+      transform="rotate(-25 38 36)"
+      fill="none"
+      stroke="#ef4444"
+      stroke-width="6.4"
+      stroke-linecap="round"
+      filter="url(#nb-glow)" />
+    <!-- cyan edge highlight -->
+    <ellipse
+      cx="38" cy="36" rx="30" ry="16"
+      transform="rotate(-25 38 36)"
+      fill="none"
+      stroke="#22d3ee"
+      stroke-opacity="0.9"
+      stroke-width="2.4"
+      stroke-linecap="round" />
+  </g>
+
+  <!-- NB letters on top -->
+  <text
+    x="10" y="44"
+    font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    font-weight="900"
+    font-size="30"
+    letter-spacing="1"
+    fill="#e6f1ff"
+    style="paint-order:stroke;stroke:#22d3ee;stroke-width:1">
+    NB
+  </text>
+</svg>
