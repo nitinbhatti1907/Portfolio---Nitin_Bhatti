@@ -453,7 +453,7 @@ const FEATURED = [
     desc:
       'Deep learning model to classify potato leaf diseases from images; highlights end-to-end pipeline thinking and ML deployment awareness.',
     tech: ['Python', 'TensorFlow/Keras', 'Computer Vision', 'FastAPI', 'React'],
-    href: 'https://github.com/your-repo-or-demo',
+    href: 'https://github.com/nitinbhatti1907/Potato-Disease-Classification-Using-CNN',
     repo: 'https://github.com/nitinbhatti1907/Potato-Disease-Classification-Using-CNN',
     image: shot3,
   },
