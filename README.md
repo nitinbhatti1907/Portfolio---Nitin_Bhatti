@@ -1,139 +1,173 @@
-# Meet Adalaja — Developer Portfolio (Gatsby.js)
+# Portfolio – Nitin Bhatti (Gatsby.js)
 
-A fast, polished portfolio site built with **Gatsby.js** to showcase projects, skills, and experience —
-deployed to Vercel.
-
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmeetadalja-portfolio.vercel.app)](https://meetadalja-portfolio.vercel.app)
-[![Last commit](https://img.shields.io/github/last-commit/MeetAdalaja/meetadalja-portfolio)](https://github.com/MeetAdalaja/meetadalja-portfolio/commits/main)
-[![Repo size](https://img.shields.io/github/repo-size/MeetAdalaja/meetadalja-portfolio)](https://github.com/MeetAdalaja/meetadalja-portfolio)
-![Built with](https://img.shields.io/badge/built%20with-Gatsby-7026B9)
-![Deployed on](https://img.shields.io/badge/deployed%20on-Vercel-000000)
+A fast, responsive developer portfolio built with Gatsby.js and React to showcase projects, experience, skills, and contact information. This repo is adapted from a Gatsby starter and fully customized for Nitin Bhatti’s personal branding.
 
 ---
 
-## ✨ Live Demo
+## 🚀 Live Demo
 
-**https://meetadalja-portfolio.vercel.app**
+> ⏳ The Netlify deployment link will be added here after going live.  
+> Example: `https://nitin-bhatti-portfolio.netlify.app`
 
 ---
 
-## 📦 Tech Stack
+## ✨ Features
+
+- **Hero / Introduction** – concise summary of who Nitin is, current focus, and call-to-action buttons.
+- **Responsive navigation** – desktop and mobile menus with smooth scrolling between sections.
+- **Experience & Education** – timeline-style cards for roles, technologies, and impact.
+- **Projects grid** – visually rich project cards with tech stack, descriptions, and links.
+- **Skills overview** – grouped technical skills for quick scanning by recruiters.
+- **Certificates / Achievements** – optional section to highlight certifications and awards.
+- **Contact section** – links to email and social profiles for quick reach-out.
+- **Performance-focused** – Gatsby static generation + image optimization + global CDN hosting.
+
+---
+
+## 🧱 Tech Stack
 
 - **Framework:** Gatsby.js (React)
 - **Language:** JavaScript (ESNext)
-- **Styles:** CSS / Gatsby starter styles (customizable)
-- **Build/Deploy:** Vercel
-- **Tooling:** Yarn / npm, ESLint, Prettier
+- **Styling:** CSS / Gatsby starter styles (custom components & layout tweaks)
+- **Build Tooling:** Node.js, Yarn / npm
+- **Linting & Formatting:** ESLint, Prettier
+- **Deployment Target:** Netlify (static hosting + CI/CD)
 
-> The repo includes an `.nvmrc` — recommended Node version: **v16.16.0 (LTS)**.
+> Recommended Node.js version: `v16.16.0` (based on `.nvmrc` in the project).
 
 ---
 
-## 🗂️ Repository Structure
+## 📁 Project Structure
 
 ```text
-meetadalja-portfolio/
-├─ content/        # Portfolio data (sections, projects, skills, socials, etc.)
-├─ src/            # Components, pages, and UI logic
-├─ static/         # Static assets served as-is
-├─ gatsby-*.js     # Gatsby configuration (config/node/ssr/browser)
-├─ .husky/         # Git hooks (if enabled)
+Portfolio---Nitin_Bhatti/
+├─ content/        # Portfolio content: profile, projects, skills, experience, socials, etc.
+├─ src/            # React components, pages, layout, and section logic
+├─ static/         # Static assets served as-is (favicons, images that don’t go through Gatsby)
+├─ gatsby-*.js     # Gatsby configuration (config, node, browser, ssr)
+├─ .husky/         # Optional Git hooks
 ├─ .eslintrc       # ESLint config
 ├─ prettier.config.js
 ├─ .nvmrc          # Node version pin (v16.16.0)
-└─ package.json
+└─ package.json    # Scripts and dependencies
 ```
 
-> Tip: keep text/images for content under `content/` and `static/` so the site stays configurable.
+Keep most portfolio data inside `content/` and assets inside `static/` so the UI stays reusable and easy to maintain.
 
 ---
 
-## ⚙️ Local Development
+## 🛠️ Getting Started (Local Development)
 
-### 1) Clone & install
+### 1️⃣ Clone the repo
 
 ```bash
-git clone https://github.com/MeetAdalaja/meetadalja-portfolio.git
-cd meetadalja-portfolio
-# optional but recommended (uses .nvmrc):
-nvm install && nvm use
-# install deps (choose one)
-yarn         # or: npm install
+git clone https://github.com/nitinbhatti1907/Portfolio---Nitin_Bhatti.git
+cd Portfolio---Nitin_Bhatti
 ```
 
-### 2) Run the dev server
+### 2️⃣ Install dependencies
+
+If you use `nvm`:
 
 ```bash
-npm start    # or: yarn start
-# default: http://localhost:8000
+nvm install
+nvm use
 ```
 
-### 3) Production build & preview
+Then install packages (pick one):
 
 ```bash
-npm run build    # generates /public
-npm run serve    # serves the production build
+yarn
+# or
+npm install
+```
+
+### 3️⃣ Run the development server
+
+```bash
+npm start
+# or
+yarn start
+```
+
+By default the site runs at: `http://localhost:8000`.
+
+### 4️⃣ Production build & preview
+
+```bash
+npm run build   # generates the production build into /public
+npm run serve   # serves the built site for local preview
 ```
 
 ---
 
-## 🧩 Customizing Content
+## ✏️ Customizing the Portfolio
 
-You can update most of the portfolio without touching components:
+Most content can be updated without touching the core React components:
 
-- **Profile & socials:** Edit entries in `content/` (e.g., name, title, links).
-- **Skills:** Add or reorder skills in `content/` (grouped or as a flat list).
-- **Projects:** Add each project with title, tech stack, description, repo/demo links, and images.
-- **Experience / Education:** Add timeline entries with role, org, dates, and highlights.
+- **Profile & Hero:** Update name, title, summary, and CTA text in the relevant files under `content/`.
+- **Social Links:** Edit GitHub, LinkedIn, email, etc. in `content/` so they stay consistent across the site.
+- **Projects:** Add or edit entries with title, description, tech stack, GitHub repo, and live demo links.
+- **Experience / Education:** Modify timeline entries to reflect roles, dates, organizations, and key impact.
+- **Skills:** Group skills by category (Frontend, Backend, Tools, Data, etc.) for better readability.
+- **Certificates / Achievements:** Add new items as you earn them; these can be shown as cards or list items.
 
-> After editing `content/`, restart the dev server to ensure changes are reflected.
+After changing content, restart the dev server if you don’t see updates immediately.
+
+---
+
+## ☁️ Deploying to Netlify
+
+Once the repo is on GitHub, deploying to Netlify is straightforward:
+
+1. Go to **Netlify → Add new site → Import an existing project**.
+2. Choose **GitHub** and select `Portfolio---Nitin_Bhatti`.
+3. Netlify should auto-detect **Gatsby**. If needed, use:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `public`
+4. (Optional) Set **Node version** to `16.16.0` under  
+   *Site settings → Build & deploy → Environment → Environment variables* using `NODE_VERSION=16.16.0`.
+5. Click **Deploy site**.
+6. After the first deploy, customize your site name (e.g., `nitin-bhatti-portfolio`) under **Site settings → Change site name**.
+7. Copy the Netlify URL and update the **Live Demo** section in this README.
 
 ---
 
 ## 🧪 Quality & Formatting
 
-- **Lint:** `npm run lint` (if script present)
-- **Format:** `npm run format` (if script present)
+If scripts are configured in `package.json`, you can run:
 
-> ESLint and Prettier configs are included; wire scripts as desired in `package.json`.
+```bash
+npm run lint     # Lint the codebase with ESLint
+npm run format   # Format code with Prettier
+```
 
----
-
-## ☁️ Deploy to Vercel
-
-A Vercel project is already connected. For a fresh deployment:
-
-1. **New Project → Import GitHub repo**
-2. **Framework Preset:** Gatsby
-3. **Build Command:** `npm run build` (or `gatsby build`)
-4. **Output Directory:** `public`
-5. **Node Version:** respect `.nvmrc` (16.16.0) or set in Vercel’s Project → Settings → Node.js
-6. Deploy — your site will be on **https://meetadalja-portfolio.vercel.app**
-
-> For custom domains, add them under **Vercel → Project → Domains** and redeploy.
+These help keep the codebase consistent and review-friendly for collaborators and recruiters.
 
 ---
 
+## 🔮 Possible Enhancements (Roadmap)
+
+- Add a **theme toggle** (light/dark mode).
+- Introduce **project filters** by tech stack or category.
+- Add a **blog** section powered by Markdown or MDX.
+- Integrate **analytics** (e.g., Plausible, Google Analytics).
+- Further **Lighthouse optimization** (image lazy-loading, font preloading, etc.).
+
 ---
 
-## 🧭 Roadmap (Nice-to-have)
+## 📬 Contact
 
-- [ ] Add a **Projects** filter by tech/tag
-- [ ] Light/Dark **theme toggle**
-- [ ] **Blog** section with Markdown posts
-- [ ] Add **analytics** (e.g., Plausible or Google Analytics via plugin)
-- [ ] Lighthouse pass (preload fonts, optimize images, lazy-load heavier assets)
+If you’re reviewing this portfolio as a recruiter or collaborator and want to connect:
+
+- **Author:** Nitin Bhatti  
+- **GitHub:** [@nitinbhatti1907](https://github.com/nitinbhatti1907)
+
+Feel free to open an issue or reach out through the contact links on the live site.
 
 ---
 
 ## 📄 License
 
-If you intend to open-source this portfolio, add a license file (e.g., MIT).
-Otherwise, you can leave it unlicensed for personal use.
-
----
-
-## 🙏 Acknowledgements
-
-- Gatsby.js community & plugin authors
-- Open-source tool maintainers that power the web
+This project is currently intended for personal portfolio use.  
+If you plan to reuse or open-source it, consider adding a standard license (e.g., MIT) to this repository.
