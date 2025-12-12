@@ -5,7 +5,7 @@ module.exports = {
     title: 'Nitin Bhatti',
     description:
       'Nitin Bhatti is a data analyst who turns messy data into clear decisions — Power BI, Metabase, Tableau, and Python/ML.',
-    siteUrl: 'https://meetadalaja.com', // No trailing slash allowed!
+    siteUrl: 'https://nitinbhatti-portfolio.netlify.app/', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
