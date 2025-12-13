@@ -227,7 +227,7 @@ const Hero = () => {
     <>
       <StyledHeroSection id="profile" aria-label="Intro">
         <div className="inner">
-          <div className="overline">Hi, My self</div>
+          <div className="overline">Hi, I'm</div>
 
           <h1 className="name">Nitin Bhatti</h1>
 
