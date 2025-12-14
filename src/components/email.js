@@ -5,6 +5,7 @@ import { Side } from '@components';
 import { socialMedia, email as emailAddr } from '@config';
 import { Icon } from '@components/icons'; // we already use this in Social
 
+
 const StyledIconRail = styled.ul`
   display: flex;
   flex-direction: column;
@@ -22,22 +23,21 @@ const StyledIconRail = styled.ul`
   }
   a:hover, a:focus { color: var(--green); transform: translateY(-3px); }
 
-  &::after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 90px;
-    margin: 10px auto 0;
-    background: var(--light-slate);
-    opacity: .3;
+    &::after {
     content: '';
     display: block;
     width: 3px;
     height: 160px;
     margin: 14px auto 0;
     background: var(--light-slate);
-    opacity: .55;
+    opacity: 0.55;
     border-radius: 2px;
+
+    /* CUT the bottom part when footer overlaps */
+    clip-path: inset(0 0 var(--footer-overlap, 0px) 0);
+    will-change: clip-path;
+    transform: translateZ(0);
+    transition: clip-path 420ms linear;
   }
 
   /* keep icon size consistent */

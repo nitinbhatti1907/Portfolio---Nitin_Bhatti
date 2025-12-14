@@ -64,7 +64,7 @@ const LogoButton = styled.button`
     font-size: 14px;
     color: var(--lightest-slate);
     background: ${({ $active }) =>
-      $active ? 'var(--green-tint)' : 'var(--light-navy)'};
+    $active ? 'var(--green-tint)' : 'var(--light-navy)'};
   }
 `;
 
@@ -105,8 +105,63 @@ const Panel = styled.div`
     font-size: clamp(22px, 3vw, 30px);
     line-height: 1.25;
 
+    /* IMPORTANT: wrap only between title and the "@ + company" chunk */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 10px;
+    row-gap: 4px;
+
     .company {
       color: var(--green);
+
+      /* keep "@ + company" together so wrap happens BEFORE @ */
+      display: inline-flex;
+      align-items: baseline;
+      white-space: nowrap;
+
+      .at {
+        margin-right: 8px;
+      }
+
+      a.inline-link {
+        color: inherit !important;
+        position: relative;
+        display: inline-block;
+        text-decoration: none !important;
+        outline: none;
+
+        /* hard reset global inline-link styles (the "bar" one) */
+        background: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+
+        /* remove any existing ::before from global */
+        &::before {
+          content: none !important;
+          display: none !important;
+        }
+
+        /* our underline (thin + left-to-right animation) */
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 1px;
+          background: currentColor;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 220ms ease;
+          pointer-events: none;
+        }
+
+        &:hover::after,
+        &:focus-visible::after {
+          transform: scaleX(1);
+        }
+      }
     }
   }
 
@@ -278,7 +333,7 @@ const Jobs = () => {
               <h3>
                 <span>{activeFm.title}</span>
                 <span className="company">
-                  &nbsp;@&nbsp;
+                  <span className="at">@</span>
                   <a href={activeFm.url} className="inline-link">
                     {activeFm.company}
                   </a>

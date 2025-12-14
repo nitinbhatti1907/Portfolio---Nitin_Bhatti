@@ -1,3 +1,4 @@
+// src/sections/about.js (or wherever your About component lives)
 import React, { useEffect, useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
@@ -21,11 +22,20 @@ const StyledAboutSection = styled.section`
     clear: both;
   }
 
-  /* paragraphs – justified for clean edges */
+  /* paragraphs – justified for clean edges (NO word cutting) */
   .text p {
     text-align: justify;
     text-justify: inter-word;
-    hyphens: auto;
+
+    /* ✅ stop auto splits like "plat-forms" */
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+
+    /* ✅ keep whole words together */
+    word-break: keep-all;
+    overflow-wrap: normal;
+
     margin: 0 0 15px;
   }
 
@@ -33,11 +43,12 @@ const StyledAboutSection = styled.section`
   .pic {
     float: right;
     width: clamp(220px, 26vw, 320px);
-    margin: 0 0 28px 32px;        /* ↑ extra space below image */
+    margin: 0 0 28px 32px; /* ↑ extra space below image */
+
     /* Make surrounding text keep a bit of distance from the photo’s edge */
     @supports (shape-outside: margin-box) {
       shape-outside: margin-box;
-      shape-margin: 12px;         /* buffer around the float (incl. bottom) */
+      shape-margin: 12px; /* buffer around the float (incl. bottom) */
     }
   }
 
@@ -84,12 +95,16 @@ const StyledText = styled.div`
     @media (max-width: 768px) {
       grid-template-columns: 1fr 1fr;
       gap: 8px 16px;
-      li { font-size: 15px; }
+      li {
+        font-size: 15px;
+      }
     }
 
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
-      li { font-size: 15px; }
+      li {
+        font-size: 15px;
+      }
     }
   }
 `;
@@ -109,7 +124,7 @@ const StyledPic = styled.div`
     display: block;
     width: 100%;
     border-radius: var(--border-radius);
-    background: transparent;                /* no tint by default */
+    background: transparent; /* no tint by default */
     transition: var(--transition);
   }
 
@@ -121,7 +136,7 @@ const StyledPic = styled.div`
   }
   .wrapper:hover::after,
   .wrapper:focus::after {
-    transform: translate(8px, 8px);         /* same frame slide as before */
+    transform: translate(8px, 8px); /* same frame slide as before */
   }
 
   /* frame (behind the image) — unchanged */
@@ -135,7 +150,7 @@ const StyledPic = styled.div`
     border: 2px solid var(--green);
     border-radius: var(--border-radius);
     transition: var(--transition);
-    z-index: -1;                             /* stays behind */
+    z-index: -1; /* stays behind */
   }
 
   /* cyan tint overlay — ONLY appears on hover */
@@ -146,14 +161,14 @@ const StyledPic = styled.div`
     border-radius: var(--border-radius);
     background: var(--green);
     mix-blend-mode: multiply;
-    opacity: 0;                              /* hidden by default */
+    opacity: 0; /* hidden by default */
     transition: var(--transition);
     pointer-events: none;
-    z-index: 1;                              /* above the image, below nothing else */
+    z-index: 1; /* above the image, below nothing else */
   }
   .wrapper:hover::before,
   .wrapper:focus::before {
-    opacity: 1;                              /* show cyan tint on hover */
+    opacity: 1; /* show cyan tint on hover */
   }
 
   /* normal photo (white/untinted) by default */
@@ -223,21 +238,20 @@ const About = () => {
           </p>
 
           <p>
-            At <b>TechAnek Technologies</b>, I built interactive KPI dashboards in{' '}
-            Power BI/Metabase, automated reporting (cutting manual effort by ~40%),
-            implemented OCR ingestion with AWS Textract, developed ML models for
-            classification/anomaly detection in Python, and improved data quality with pipeline
-            cleanup. Earlier, with <b>SAP India (Edunet Foundation)</b> I prototyped AI/IoT and computer-vision
-            utilities, and at <b>Infolabz</b> I trained ML models and delivered client-ready
-            visualizations. I’ve also taught Python (beginner → advanced), which sharpened my communication and problem-solving.
+            At <b>TechAnek Technologies</b>, I built interactive KPI dashboards in Power BI/Metabase,
+            automated reporting (cutting manual effort by ~40%), implemented OCR ingestion with AWS
+            Textract, developed ML models for classification/anomaly detection in Python, and
+            improved data quality with pipeline cleanup. Earlier, with <b>SAP India (Edunet Foundation)</b> I
+            prototyped AI/IoT and computer-vision utilities, and at <b>Infolabz</b> I trained ML models and
+            delivered client-ready visualizations. I’ve also taught Python (beginner → advanced),
+            which sharpened my communication and problem-solving.
           </p>
 
           <p>
-            My goal is to own end-to-end analytics—from data collection and modeling to
-            decision-driving dashboards. I’m actively building a Power BI dashboard gallery, refining
-            DAX/SQL, and practicing product-level storytelling with real datasets and scheduled
-            refresh. I’m open to full-time roles and collaborations where I can ship measurable
-            impact fast.
+            My goal is to own end-to-end analytics—from data collection and modeling to decision-driving
+            dashboards. I’m actively building a Power BI dashboard gallery, refining DAX/SQL, and practicing
+            product-level storytelling with real datasets and scheduled refresh. I’m open to full-time roles and
+            collaborations where I can ship measurable impact fast.
           </p>
 
           <p className="skills-intro">Here are a few technologies I’ve been working with recently:</p>

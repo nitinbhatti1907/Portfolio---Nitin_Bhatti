@@ -1,5 +1,5 @@
 // src/components/footer.js
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Icon } from '@components/icons';
 import { socialMedia } from '@config';
@@ -26,12 +26,18 @@ const drawRing = keyframes`
 /* ===== Layout ===== */
 const StyledFooter = styled.footer`
   position: relative;
+  z-index: 50;          /* footer stays in front */
+  isolation: isolate;   /* ensures stacking works cleanly */
+
   padding: 18px 24px 20px;
   ${({ theme }) => theme.mixins.flexBetween};
   align-items: center;
   gap: 16px;
   border-top: 1px solid var(--light-navy);
-  background: transparent;
+
+  /* keeps same look but paints a layer */
+  background: inherit;
+
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -282,6 +288,37 @@ const NBFooterLogo = () => (
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const el = footerRef.current;
+    if (!el) return;
+
+    let raf = 0;
+
+    const update = () => {
+      raf = 0;
+      const rect = el.getBoundingClientRect();
+      const overlap = Math.min(rect.height, Math.max(0, window.innerHeight - rect.top));
+      document.documentElement.style.setProperty('--footer-overlap', `${overlap}px`);
+    };
+
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+
+    return () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      document.documentElement.style.setProperty('--footer-overlap', '0px');
+    };
+  }, []);
 
   // Remove any GitHub / LinkedIn entries from footer social links
   const filteredSocialMedia = Array.isArray(socialMedia)
@@ -293,7 +330,7 @@ const Footer = () => {
     : [];
 
   return (
-    <StyledFooter>
+    <StyledFooter ref={footerRef}>
       {/* mobile socials (if any, except github/linkedin) */}
       {filteredSocialMedia.length > 0 && (
         <StyledSocialLinks>
@@ -334,4 +371,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
