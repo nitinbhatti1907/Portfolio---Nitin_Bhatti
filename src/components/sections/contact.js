@@ -30,7 +30,11 @@ const Overline = styled.h2`
 `;
 
 const Headline = styled.div`
-  --fz: clamp(42px, 5.8vw, 102px);
+  --fz: clamp(
+    calc(42px * var(--ui-scale)),
+    calc(5.8vw * var(--ui-scale)),
+    calc(102px * var(--ui-scale))
+  );
   --lh: 0.95;
   --word-gap: 0.22em;
   --line-gap: 0.14em;

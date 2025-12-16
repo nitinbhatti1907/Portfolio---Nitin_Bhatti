@@ -176,12 +176,33 @@ const Wrapper = styled.header`
   top: 0;
   z-index: 1000;
 
-  /* full-bleed background */
+  /* full-bleed background (KEEP SAME TECHNIQUE) */
   left: 0;
   right: 0;
+
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+
+  /* ✅ FIX: prevent the tiny mobile extra width that creates right-side space */
+  @supports (width: 100svw) {
+    width: 100svw;
+    margin-left: calc(50% - 50svw);
+    margin-right: calc(50% - 50svw);
+  }
+
+  @supports (width: 100dvw) {
+    width: 100dvw;
+    margin-left: calc(50% - 50dvw);
+    margin-right: calc(50% - 50dvw);
+  }
+
+  overflow-x: clip;
+
+  @supports not (overflow: clip) {
+    overflow-x: hidden;
+  }
+
 
   backdrop-filter: ${(p) => (p.$stuck ? 'blur(8px)' : 'none')};
   background: ${(p) => (p.$stuck ? 'rgba(2, 12, 27, 0.65)' : 'transparent')};
@@ -191,11 +212,13 @@ const Wrapper = styled.header`
 `;
 
 const Progress = styled.div`
-  position: absolute;
-  inset: 0 auto auto 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
-  width: 100%;
   pointer-events: none;
+  z-index: 1001;
 
   &:after {
     content: '';
@@ -219,22 +242,35 @@ const Bar = styled.nav`
   gap: 16px;
   transition: padding 0.2s ease;
 
+  /* ✅ FIX: make sure this flex row never forces extra width */
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+
   /* === brand / logo === */
   .brand {
     display: inline-flex;
     align-items: center;
-    height: 36px; /* visual bar height anchor */
+    height: 36px;
     line-height: 0;
     padding: 0;
+
+    /* ✅ FIX: keep space for burger and prevent logo from pushing width */
+    min-width: 0;
+    max-width: calc(100% - 52px);
   }
+
   .brand > svg.brand-logo {
     display: block;
-    height: 135%; /* use the brand “slot” height */
+    height: 135%;
     width: auto;
     overflow: visible;
     transform: ${(p) => (p.$stuck ? 'scale(1.55)' : 'scale(1.68)')};
     transform-origin: left center;
     margin: -5px 0 -5px;
+
+    /* ✅ FIX: hard cap just to avoid ultra-small screens overflow */
+    max-width: 92px;
   }
 
   /* === links (desktop) === */
@@ -394,7 +430,11 @@ const Bar = styled.nav`
     background: transparent;
     cursor: pointer;
     position: relative;
+
+    /* ✅ FIX: make sure burger never gets pushed out */
+    flex: 0 0 auto;
   }
+
   .burger span,
   .burger:before,
   .burger:after {
@@ -406,18 +446,11 @@ const Bar = styled.nav`
     background: var(--lightest-slate);
     transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
   }
-  .burger span {
-    top: 15px;
-  }
-  .burger:before {
-    top: 8px;
-  }
-  .burger:after {
-    top: 22px;
-  }
-  .burger[aria-expanded='true'] span {
-    opacity: 0;
-  }
+  .burger span { top: 15px; }
+  .burger:before { top: 8px; }
+  .burger:after { top: 22px; }
+
+  .burger[aria-expanded='true'] span { opacity: 0; }
   .burger[aria-expanded='true']:before {
     top: 15px;
     transform: rotate(45deg);
@@ -428,16 +461,10 @@ const Bar = styled.nav`
   }
 
   @media (max-width: 900px) {
-    .links {
-      display: none;
-    }
-    .burger {
-      display: block;
-    }
+    .links { display: none; }
+    .burger { display: block; }
 
-    .brand {
-      height: 34px;
-    }
+    .brand { height: 34px; }
     .brand > svg.brand-logo {
       transform: ${(p) => (p.$stuck ? 'scale(1.45)' : 'scale(1.58)')};
       margin: -4px 0 -4px;
@@ -451,6 +478,11 @@ const MobileOverlay = styled.div`
   inset: 0;
   z-index: 900;
   display: none;
+
+  /* ✅ safe guard against any horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 
   @media (max-width: 900px) {
     display: ${({ $open }) => ($open ? 'flex' : 'none')};
@@ -613,7 +645,6 @@ const Nav = () => {
   const navRef = useRef(null);
 
   useEffect(() => {
-    // keep anchor offset equal to measured header height
     const el = navRef.current;
     if (!el) return;
     const setOffset = () => {
@@ -635,7 +666,6 @@ const Nav = () => {
   }, [open]);
 
   useEffect(() => {
-    // toggle "stuck" after the hero sentinel
     if (typeof window === 'undefined') return;
     const sentinel = document.getElementById('nav-sentinel');
     if (!sentinel) {
@@ -650,7 +680,6 @@ const Nav = () => {
   }, []);
 
   useEffect(() => {
-    // scroll progress line
     if (typeof window === 'undefined') return;
     const onScroll = () => {
       const h = document.documentElement;
@@ -664,12 +693,8 @@ const Nav = () => {
   }, []);
 
   const closeMobile = () => setOpen(false);
-
   const handleBackdropClick = () => closeMobile();
-
-  const handlePanelClick = (e) => {
-    e.stopPropagation();
-  };
+  const handlePanelClick = (e) => e.stopPropagation();
 
   return (
     <>
@@ -682,7 +707,6 @@ const Nav = () => {
       >
         <Progress />
         <Bar $stuck={stuck}>
-          {/* logo → hero */}
           <a
             href="/#profile"
             className="brand"
@@ -692,7 +716,6 @@ const Nav = () => {
             <NBNavLogo className="brand-logo" />
           </a>
 
-          {/* DESKTOP LINKS */}
           <div className="links" role="menubar" aria-label="Primary">
             <a className="navlink" href="/#about">Profile</a>
             <a className="navlink" href="/#experience">Experience</a>
@@ -705,7 +728,6 @@ const Nav = () => {
             </a>
           </div>
 
-          {/* MOBILE TOGGLER */}
           <button
             className="burger"
             aria-expanded={open}
@@ -718,7 +740,6 @@ const Nav = () => {
         </Bar>
       </Wrapper>
 
-      {/* MOBILE OVERLAY MENU */}
       <MobileOverlay id="mobile-menu" $open={open} onClick={handleBackdropClick}>
         <div className="backdrop" />
         <div className="panel" onClick={handlePanelClick}>

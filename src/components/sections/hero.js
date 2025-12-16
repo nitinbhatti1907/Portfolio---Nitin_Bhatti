@@ -67,7 +67,11 @@ const StyledHeroSection = styled.section`
     color: var(--lightest-slate);
     line-height: 1.05;
     font-weight: 800;
-    font-size: clamp(42px, 8vw, 84px);
+    font-size: clamp(
+      calc(42px * var(--ui-scale)),
+      calc(8vw * var(--ui-scale)),
+      calc(84px * var(--ui-scale))
+    );
     margin: 0 0 10px;
   }
 

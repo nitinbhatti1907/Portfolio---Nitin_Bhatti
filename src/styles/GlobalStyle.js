@@ -9,9 +9,32 @@ const GlobalStyle = createGlobalStyle`
   ${variables};
 
   html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  scroll-behavior: smooth;
+
+  /* ✅ Fix horizontal scroll (blank space on right) */
+  overflow-x: clip;
+}
+
+/* Fallback for browsers that don’t support overflow: clip */
+@supports not (overflow: clip) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
+
+    /* Scrollbar Styles */
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-slate) var(--navy);
+  }
+
+  /* ✅ Gatsby wrappers: keep them normal (no overflow) */
+  #root,
+  #___gatsby,
+  #gatsby-focus-wrapper {
     width: 100%;
-    scroll-behavior: smooth;
   }
 
   *,
@@ -25,36 +48,21 @@ const GlobalStyle = createGlobalStyle`
     color: var(--lightest-slate);
   }
 
-  /* Provide basic, default focus styles.*/
   :focus {
     outline: 2px dashed var(--green);
     outline-offset: 3px;
   }
 
-  /*
-    Remove default focus styles for mouse users ONLY if
-    :focus-visible is supported on this platform.
-  */
   :focus:not(:focus-visible) {
     outline: none;
     outline-offset: 0px;
   }
 
-  /*
-    Optionally: If :focus-visible is supported on this
-    platform, provide enhanced focus styles for keyboard
-    focus.
-  */
   :focus-visible {
     outline: 2px dashed var(--green);
     outline-offset: 3px;
   }
 
-  /* Scrollbar Styles */
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--dark-slate) var(--navy);
-  }
   ::-webkit-scrollbar {
     width: 12px;
   }
@@ -71,11 +79,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     width: 100%;
     min-height: 100%;
-    overflow-x: hidden;
+
+    /* ✅ Fix horizontal scroll WITHOUT breaking sticky */
+    overflow-x: hidden; /* fallback */
+    overflow-x: clip;   /* modern */
+
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
-    color: var(--slate);
+
+    background-color: var(--bg);
+    color: var(--text);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
     line-height: 1.3;
@@ -112,38 +125,25 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-  --bg: #0f1926;            /* deep navy backdrop */
-  --navy: #213147;          /* your requested navy */
-  --slate: #a0aec0;
-  --light-slate: #cbd5e1;
-  --text: #e6f1ff;
+    --bg: #0f1926;
+    --navy: #213147;
+    --slate: #a0aec0;
+    --light-slate: #cbd5e1;
+    --text: #e6f1ff;
 
-  /* accent replaces old --green */
-  --green: #22d3ee;
-  --green-tint: rgba(34, 211, 238, 0.12);
+    --green: #22d3ee;
+    --green-tint: rgba(34, 211, 238, 0.12);
 
-  /* fonts */
-  --font-sans: "InterVariable", Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-sans: "InterVariable", Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --sidebar-w: 0px;
   }
-  html { scroll-behavior: smooth; }
-  body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: var(--font-sans);
-  }
+
   a { color: var(--green); }
   a:hover { color: #67e8f9; }
 
-  /* Remove leftover left-rail gutter */
-  :root { --sidebar-w: 0px; }
-  #content { margin-left: 0; }
-
-
-  /* Push main content to the right of the fixed sidebar.
-    Most templates have #content in layout.js. If you don’t, see Step 3. */
   #content { margin-left: var(--sidebar-w); }
-
 
   main {
     margin: 0 auto;
@@ -179,24 +179,18 @@ const GlobalStyle = createGlobalStyle`
 
   section {
     margin: 0 auto;
-    padding: 100px 0;
+    padding: var(--section-padding-y) 0;
     max-width: 1000px;
 
     @media (max-width: 768px) {
-      padding: 80px 0;
+      padding: var(--section-padding-y-md) 0;
     }
-
     @media (max-width: 480px) {
-      padding: 60px 0;
+      padding: var(--section-padding-y-sm) 0;
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1,h2,h3,h4,h5,h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
     color: var(--lightest-slate);
@@ -207,7 +201,6 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     color: var(--green);
   }
-
 
   .big-heading {
     margin: 0;
@@ -225,7 +218,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     margin: 10px 0 40px;
     width: 100%;
-    font-size: clamp(26px, 5vw, var(--fz-heading));
+    font-size: clamp(calc(26px * var(--ui-scale)), calc(5vw * var(--ui-scale)), var(--fz-heading));
     white-space: nowrap;
 
     &:before {
@@ -389,9 +382,6 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--lightest-navy);
     height: 1px;
     border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
     margin: 1rem;
   }
 
@@ -425,9 +415,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  #logo {
-    color: var(--green);
-  }
+  #logo { color: var(--green); }
 
   .overline {
     color: var(--green);
@@ -443,12 +431,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-mono);
     font-weight: 400;
     line-height: 1.5;
-    @media (max-width: 1080px) {
-      font-size: var(--fz-sm);
-    }
-    @media (max-width: 768px) {
-      font-size: var(--fz-xs);
-    }
+
+    @media (max-width: 1080px) { font-size: var(--fz-sm); }
+    @media (max-width: 768px) { font-size: var(--fz-xs); }
 
     a {
       ${({ theme }) => theme.mixins.inlineLink};
@@ -479,11 +464,8 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .gatsby-image-outer-wrapper {
-    height: 100%;
-  }
+  .gatsby-image-outer-wrapper { height: 100%; }
 
-  /* Justify the job description bullets in Industry Experience */
   #experience .tab-panels ul.job-description li,
   #experience .tab-panels ul.job-description p {
     text-align: justify !important;
@@ -493,9 +475,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
   }
 
-
   ${TransitionStyles};
-
   ${PrismStyles};
 `;
 

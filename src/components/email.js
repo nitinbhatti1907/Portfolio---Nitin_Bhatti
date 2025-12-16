@@ -37,7 +37,7 @@ const StyledIconRail = styled.ul`
     clip-path: inset(0 0 var(--footer-overlap, 0px) 0);
     will-change: clip-path;
     transform: translateZ(0);
-    transition: clip-path 420ms linear;
+    transition: clip-path 50ms linear;
   }
 
   /* keep icon size consistent */

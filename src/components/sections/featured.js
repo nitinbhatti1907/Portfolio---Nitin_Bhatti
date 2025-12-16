@@ -29,35 +29,9 @@ const comet = keyframes`
   100% { transform: translate3d(120%, 100%, 0) rotate(-20deg); opacity: 0; }
 `;
 
-/* ⭕ small pulse + comet for the orbit buttons (same vibe as hero/nav) */
-const buttonPulse = keyframes`
-  0% {
-    box-shadow:
-      0 0 0 rgba(34, 211, 238, 0.0),
-      0 0 10px rgba(34, 211, 238, 0.25);
-  }
-  50% {
-    box-shadow:
-      0 0 18px rgba(34, 211, 238, 0.6),
-      0 0 36px rgba(34, 211, 238, 0.35);
-  }
-  100% {
-    box-shadow:
-      0 0 0 rgba(34, 211, 238, 0.0),
-      0 0 10px rgba(34, 211, 238, 0.25);
-  }
-`;
-
-const cometFly = keyframes`
-  0%   { transform: translateX(-130%) translateY(-50%); opacity: 0; }
-  20%  { opacity: 1; }
-  60%  { transform: translateX(130%) translateY(-50%); opacity: 1; }
-  100% { transform: translateX(170%) translateY(-50%); opacity: 0; }
-`;
-
 /* ===== Layout ===== */
 const Section = styled.section`
-  margin: 0 auto 50px;   /* 🔥 centered + consistent 50px space below */
+  margin: 0 auto 50px;
   max-width: 1200px;
 
   @media (max-width: 980px) {
@@ -71,7 +45,6 @@ const LeftGroup = styled.div`
   gap: 14px;
 `;
 
-/* Title above the image (unchanged look) */
 const TitleAbove = styled.h3`
   font-size: clamp(28px, 3.6vw, 30px);
   line-height: 1.12;
@@ -81,7 +54,9 @@ const TitleAbove = styled.h3`
 
   &:after {
     content: '';
-    position: absolute; left: 0; bottom: -10px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
     width: clamp(120px, 28vw, 280px);
     height: 2px;
     background: linear-gradient(90deg, rgba(34,211,238,0), var(--green), rgba(34,211,238,0));
@@ -93,16 +68,19 @@ const TitleAbove = styled.h3`
 const Canvas = styled.a`
   position: relative;
   display: block;
-  min-height: 360px;
   border-radius: 22px;
   overflow: hidden;
   outline: none;
+  line-height: 0; /* ✅ prevents any extra inline whitespace */
+
   background:
     radial-gradient(1200px 500px at -20% -10%, rgba(34,211,238,.10), transparent 60%),
     linear-gradient(180deg, #102131 0%, #0a1624 100%);
+
   box-shadow:
     0 50px 120px rgba(0,0,0,.5),
     inset 0 0 0 1px rgba(255,255,255,.03);
+
   transition: transform .35s ease, box-shadow .35s ease;
 
   &:hover,
@@ -111,6 +89,11 @@ const Canvas = styled.a`
     box-shadow:
       0 60px 140px rgba(0,0,0,.6),
       inset 0 0 0 1px rgba(255,255,255,.06);
+  }
+
+  /* Keep a nice height ONLY when there's no image */
+  &:not([data-hasimg="true"]) {
+    min-height: 360px;
   }
 
   &:before {
@@ -195,18 +178,22 @@ const Canvas = styled.a`
     pointer-events: none;
   }
 
-  &[data-hasimg="true"] { background: #0b1827; }
-
-  .shot {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: saturate(.95) contrast(1.05) brightness(.92);
-    transform: scale(1.02);
-    transition: transform .5s ease, filter .5s ease;
+  &[data-hasimg="true"] {
+    background: #0b1827;
   }
+
+  /* ✅ KEY FIX: image is NOT absolute anymore, so card height fits image */
+  .shot {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: saturate(.95) contrast(1.05) brightness(.92);
+    transform: none;
+    transition: filter .45s ease;
+  }
+
   .overlay {
     position: absolute;
     inset: 0;
@@ -215,11 +202,12 @@ const Canvas = styled.a`
       radial-gradient(120% 90% at 0% 0%, rgba(34,211,238,.10), transparent 60%),
       linear-gradient(180deg, rgba(8,16,26,0) 0%, rgba(8,16,26,.15) 55%, rgba(8,16,26,.35) 100%);
   }
+
   &:hover .shot,
   &:focus-visible .shot {
-    transform: scale(1.045);
     filter: saturate(1) contrast(1.08) brightness(.96);
   }
+
   &[data-hasimg="true"]::before,
   &[data-hasimg="true"]::after {
     opacity: .12;
@@ -241,7 +229,6 @@ const Meta = styled.div`
   }
 `;
 
-/* glass bubble with shimmer */
 const Bubble = styled.div`
   position: relative;
   border-radius: 14px;
@@ -284,8 +271,12 @@ const Bubble = styled.div`
 `;
 
 const Tech = styled.ul`
-  display: flex; flex-wrap: wrap;
-  gap: 8px 12px; margin: 4px 0 8px; padding: 0; list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 4px 0 8px;
+  padding: 0;
+  list-style: none;
 
   li {
     font-family: var(--font-mono);
@@ -308,7 +299,7 @@ const Actions = styled.div`
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 10px;                 /* space between text + icon */
+    gap: 10px;
     padding: 10px 18px;
     border-radius: 999px;
     border: 1px solid rgba(34, 211, 238, 0.85);
@@ -361,7 +352,6 @@ const Actions = styled.div`
 const LiveIcon = () => (
   <span className="orbit-icon" aria-hidden="true">
     <svg viewBox="0 0 24 24">
-      {/* longer diagonal arrow, uses more of the circle */}
       <path
         d="M7 17L17 7M10 7h7v7"
         fill="none"
@@ -377,7 +367,6 @@ const LiveIcon = () => (
 const RepoIcon = () => (
   <span className="orbit-icon" aria-hidden="true">
     <svg viewBox="0 0 24 24">
-      {/* compact GitHub-style mark */}
       <path
         d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.1.68-.22.68-.5
            0-.25-.01-.9-.01-1.76-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.11-1.48-1.11-1.48
@@ -400,7 +389,6 @@ const Row = styled.article`
   align-items: center;
   margin-bottom: 120px;
 
-  /* flip columns when reverse prop is true */
   ${({ reverse }) =>
     reverse &&
     css`
@@ -418,7 +406,6 @@ const Row = styled.article`
     gap: 28px;
     margin-bottom: 84px;
 
-    /* On mobile: always stack image first, then content */
     & > *:first-child {
       order: 1;
     }
@@ -465,8 +452,7 @@ const Featured = () => {
       <h2 className="numbered-heading">Projects</h2>
 
       {FEATURED.map((p, i) => (
-        <Row key={i} reverse={i % 2 === 1 /* 2nd, 4th, ... flip */}>
-          {/* LEFT: title above the image, then image */}
+        <Row key={i} reverse={i % 2 === 1}>
           <LeftGroup>
             <TitleAbove>{p.title}</TitleAbove>
 
@@ -479,12 +465,7 @@ const Featured = () => {
             >
               {p.image ? (
                 <>
-                  <img
-                    className="shot"
-                    src={p.image}
-                    alt={`${p.title} preview`}
-                    loading="lazy"
-                  />
+                  <img className="shot" src={p.image} alt={`${p.title} preview`} loading="lazy" />
                   <div className="overlay" />
                 </>
               ) : (
@@ -498,7 +479,6 @@ const Featured = () => {
             </Canvas>
           </LeftGroup>
 
-          {/* RIGHT: overline, blurb, tech, actions */}
           <Meta>
             <span className="overline">Featured Project</span>
 
@@ -514,23 +494,13 @@ const Featured = () => {
             </Tech>
 
             <Actions>
-              <a
-                className="orbit-button"
-                href={p.href}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a className="orbit-button" href={p.href} target="_blank" rel="noreferrer">
                 <span className="label">Go Live</span>
                 <LiveIcon />
               </a>
 
               {p.repo && (
-                <a
-                  className="orbit-button"
-                  href={p.repo}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a className="orbit-button" href={p.repo} target="_blank" rel="noreferrer">
                   <span className="label">GitHub</span>
                   <RepoIcon />
                 </a>

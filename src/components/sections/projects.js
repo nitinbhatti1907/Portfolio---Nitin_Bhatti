@@ -31,8 +31,8 @@ const Wrap = styled.section`
 
     /* ✅ allow wrapping, but keep the line INLINE after the text */
     h2.numbered-heading {
-      display: inline-block;   /* text + ::after share one inline flow */
-      white-space: normal;     /* allow “Other Noteworthy / Projects” */
+      display: inline-block;
+      white-space: normal;
       line-height: 1.2;
       max-width: 100%;
     }
@@ -41,15 +41,15 @@ const Wrap = styled.section`
       content: '';
       display: inline-block;
       position: relative;
-      top: -0.15em;            /* slight tweak so line sits on same baseline */
-      width: 80px;             /* length of the line on small screens */
+      top: -0.15em;
+      width: 80px;
       height: 1px;
-      margin-left: 8px;        /* gap after “Projects” */
+      margin-left: 8px;
       background-color: var(--lightest-navy);
     }
   }
 
-  /* < 500px: hide the line completely */
+  /* < 274px: hide the line completely */
   @media (max-width: 274px) {
     h2.numbered-heading::after {
       display: none;
@@ -59,17 +59,18 @@ const Wrap = styled.section`
 
 /* ===========================
    HORIZONTAL SCROLLER
-   (only really active on small screens)
+   (only active on smaller screens)
    =========================== */
 const ScrollOuter = styled.div`
-  margin-top: clamp(130px, 25vh, 220px);
+  /* slightly smaller so 100% zoom feels like your 90% reference */
+  margin-top: clamp(117px, 22vh, 198px);
 
-  /* when the screen is narrower, allow horizontal scroll only */
-  @media (max-width: 1400px) {
+  /* ✅ IMPORTANT: switch to “scroll mode” ONLY when the screen is truly smaller */
+  @media (max-width: 1200px) {
     margin-top: 30px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 12px; /* a bit of room for the scrollbar */
+    padding-bottom: 12px;
     -webkit-overflow-scrolling: touch;
   }
 `;
@@ -78,8 +79,8 @@ const ScrollOuter = styled.div`
    DIAMOND CLUSTER
    =========================== */
 const Cluster = styled.div`
-  /* global knobs */
-  --tile: clamp(190px, 20vw, 230px);
+  /* ✅ 10% smaller (so 100% zoom looks like your 90% screenshot) */
+  --tile: clamp(171px, 18vw, 207px);
   --g: clamp(0px, 0.25vw, 6px);
   --pull: calc(var(--tile) * -0.48);
 
@@ -109,15 +110,15 @@ const Cluster = styled.div`
     grid-column: 5;
   }
 
-  @media (max-width: 1400px) {
+  /* ✅ IMPORTANT: keep desktop layout at 100% zoom on common laptop widths */
+  @media (max-width: 1200px) {
     overflow-x: auto;
     overflow-y: hidden;
-    height: 366px;
+    height: 330px; /* was 366px; scaled down with tiles */
     align-content: center;
     align-items: self-end;
-    /* the important part: start from the left, so first card is fully visible */
     justify-content: flex-start;
-    padding-left: 40px; /* or 0 – whatever spacing you like */
+    padding-left: 40px;
   }
 `;
 
@@ -278,16 +279,16 @@ const Inner = styled.div`
   justify-content: center;
   gap: 8px;
 
-  padding: clamp(12px, 2vw, 16px);
+  padding: clamp(11px, 1.8vw, 14px); /* 10% smaller */
   width: 82%;
   height: 82%;
   text-align: center;
 `;
 
 const Glyph = styled.div`
-  width: clamp(28px, 3vw, 34px);
-  height: clamp(28px, 3vw, 34px);
-  margin-bottom: clamp(4px, 0.6vw, 6px);
+  width: clamp(25px, 2.7vw, 31px); /* 10% smaller */
+  height: clamp(25px, 2.7vw, 31px);
+  margin-bottom: clamp(4px, 0.55vw, 6px);
   display: grid;
   place-items: center;
 
@@ -301,7 +302,7 @@ const Glyph = styled.div`
 
 const Title = styled.h3`
   margin: 0;
-  font-size: clamp(15px, 2vw, 18px);
+  font-size: clamp(14px, 1.8vw, 16px); /* 10% smaller */
   line-height: 1.25;
   color: var(--lightest-slate);
   text-align: center;
@@ -316,16 +317,16 @@ const RepoBtn = styled.a`
   margin-top: 6px;
   display: inline-grid;
   place-items: center;
-  width: clamp(34px, 3vw, 38px);
-  height: clamp(34px, 3vw, 38px);
+  width: clamp(31px, 2.7vw, 34px); /* 10% smaller */
+  height: clamp(31px, 2.7vw, 34px);
   border-radius: 10px;
   background: rgba(34, 211, 238, 0.08);
   border: 1px solid rgba(34, 211, 238, 0.25);
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
   svg {
-    width: clamp(19px, 2.1vw, 21px);
-    height: clamp(19px, 2.1vw, 21px);
+    width: clamp(17px, 1.9vw, 19px); /* 10% smaller */
+    height: clamp(17px, 1.9vw, 19px);
     fill: #22d3ee;
     opacity: 0.95;
   }
@@ -437,20 +438,18 @@ const GithubIcon = () => (
    COMPONENT
    =========================== */
 const Projects = () => {
-  const visible = PROJECTS; // all 5 cards
+  const visible = PROJECTS;
 
   return (
     <Wrap id="other-projects">
-      <h2 className="numbered-heading projects-heading">
-        Other Noteworthy Projects
-      </h2>
+      <h2 className="numbered-heading projects-heading">Other Noteworthy Projects</h2>
       <p className="subtitle">
         <a href="/archive">view the archive</a>
       </p>
 
       <ScrollOuter>
         <Cluster>
-          {visible.map(p => (
+          {visible.map((p) => (
             <Diamond
               key={p.title}
               href={p.repo}
@@ -525,7 +524,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Open GitHub repo"
-                  onClick={e => e.stopPropagation()}
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <GithubIcon />
                 </RepoBtn>
