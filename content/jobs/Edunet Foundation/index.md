@@ -1,7 +1,7 @@
 ---
 date: '2024-04-30'
 title: 'AI, IoT and Python Developer (Trainee)'
-company: 'SAP India with Edunet Foundation'
+company: 'SAP India'
 location: 'Ahmedabad, Gujarat, India'
 range: 'Jan 2024 — Apr 2024'
 url: 'https://www.sap.com/india/index.html'
