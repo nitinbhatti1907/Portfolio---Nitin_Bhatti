@@ -1,6 +1,6 @@
 ---
 serial: '13'
-title: 'CORAL AI – Personalized Learning Assistant'
+title: 'CORAL – Personalized AI Assistant'
 github: 'https://github.com/nitinbhatti1907/CORAL-AI-personalized-learning-assistant'
 external: ''
 tech:
