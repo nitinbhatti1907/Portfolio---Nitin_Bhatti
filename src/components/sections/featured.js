@@ -427,15 +427,6 @@ const FEATURED = [
     image: shot1,
   },
   {
-    title: 'Medical OCR Analyzer',
-    desc:
-      'Used OCR and Python to extract structured data from unstructured text documents, enabling pattern identification, trend communication,and statistical insight generation.',
-    tech: ['Python', 'Azure - OCR', 'Groq AI - Llama 3', 'Django', 'Git', 'Render'],
-    href: 'https://medical-ocr-analyzer.onrender.com/',
-    repo: 'https://github.com/nitinbhatti1907/Medical-OCR-Analyzer',
-    image: shot2,
-  },
-  {
     title: 'Potato Disease Classification',
     desc:
       'Deep learning model to classify potato leaf diseases from images; highlights end-to-end pipeline thinking and ML deployment awareness.',
@@ -443,6 +434,15 @@ const FEATURED = [
     href: 'https://nb1907-potato-disease-classification-using-cnn.hf.space/',
     repo: 'https://github.com/nitinbhatti1907/Potato-Disease-Classification-Using-CNN',
     image: shot3,
+  },
+  {
+    title: 'Medical OCR Analyzer',
+    desc:
+      'Used OCR and Python to extract structured data from unstructured text documents, enabling pattern identification, trend communication,and statistical insight generation.',
+    tech: ['Python', 'Azure - OCR', 'Groq AI - Llama 3', 'Django', 'Git', 'Render'],
+    href: 'https://medical-ocr-analyzer.onrender.com/',
+    repo: 'https://github.com/nitinbhatti1907/Medical-OCR-Analyzer',
+    image: shot2,
   },
 ];
 
