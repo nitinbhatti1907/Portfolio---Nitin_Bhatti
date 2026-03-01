@@ -1,13 +1,12 @@
 ---
 date: '2023-09-30'
-title: 'Python Django Developer'
+title: 'Junior Data Analyst'
 company: 'TechAnek Technologies'
 location: 'Ahmedabad, Gujarat, India'
-range: 'Aug 2023 — Sep 2023'
+range: 'July 2023 — December 2023 (6 Months)'
 url: 'https://techanek.com/'
 ---
-
-- Built and maintained backend for a **Commercial Business Model (CBM)** project using **Django/REST**, ensuring efficient product data management.
-- Contributed to a public website for the **Atta-Makkar** organization, improving online presence and supporting sales goals.
-- Optimized backend endpoints and data models for reliability and easier admin operations.
-- Collaborated with the web team on deployment, testing, and change tracking using **Git/GitHub**.
+****
+- Over a **6-month engagement**, standardized month-end numbers for stakeholder sign-offs by rebuilding the **Power BI model** and writing reusable **DAX** measures with quick reconciliation checks, reducing rework and keeping reporting consistent across recurring exports.
+- Enabled self-serve breakdowns for weekly reviews by creating curated **SQL views (joins/CTEs)** and publishing **Tableau** workbooks with parameters and drill paths, cutting follow-up data requests and speeding up analysis iterations.
+- Strengthened refresh reliability across recurring updates by using **Python (pandas) to clean merges, remove duplicates, handle missing values, and validate outputs** before pushing updates on the **BI tools (Power BI and Tableau)**.

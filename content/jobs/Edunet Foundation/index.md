@@ -1,12 +1,12 @@
 ---
 date: '2024-04-30'
-title: 'AI, IoT and Python Developer (Trainee)'
+title: 'Machine Learning, Deep Learning and IoT (Trainee)'
 company: 'SAP India'
 location: 'Ahmedabad, Gujarat, India'
-range: 'Jan 2024 — Apr 2024'
+range: 'Jan 2024 — Apr 2024 (4 Months)'
 url: 'https://www.sap.com/india/index.html'
 ---
-
+****
 - Prototyped **AI/IoT** utilities and built small **computer-vision** scripts in **Python** to streamline data capture and processing.
 - Explored **SAP-ABAP** fundamentals and device data flows to understand integration patterns for enterprise use.
 - Wrote documentation and demo notebooks to communicate architecture, assumptions, and results to mentors and peers.

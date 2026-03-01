@@ -3,10 +3,10 @@ date: '2025-07-31'
 title: 'Data Analyst'
 company: 'TechAnek Technologies'
 location: 'Ahmedabad, Gujarat, India (Hybrid)'
-range: 'Jun 2024 — Jul 2025'
+range: 'May 2024 — August 2025 (1 Year 4 Months)'
 url: 'https://techanek.com/'
 ---
-
+****
 - Designed and shipped interactive KPI dashboards in **Power BI** and **Metabase**, enabling real-time monitoring and faster, data-driven decisions across teams.
 - Automated recurring reports (↑ accuracy, ↓ manual effort by ~40%) and standardized metrics across business units.
 - Built OCR ingestion with **AWS Textract** to process unstructured documents and improve turnaround time.
