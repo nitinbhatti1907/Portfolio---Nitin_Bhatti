@@ -230,7 +230,7 @@ const About = () => {
           </StyledPic>
 
           <p>
-            I’m Nitin Bhatti, a <b>Data Analyst</b> with 1.5 years of industry experience. My toolkit
+            I’m Nitin Bhatti, a <b>Data Analyst</b> with 2+ years of industry experience. My toolkit
             spans Python (pandas, NumPy, scikit-learn) and BI platforms—Power BI, Metabase, and
             Tableau—plus Excel and light backend work (Django/REST) when analytics needs an API. I
             care about clean pipelines, trustworthy metrics, and explainable outputs that business
@@ -242,7 +242,7 @@ const About = () => {
             automated reporting (cutting manual effort by ~40%), implemented OCR ingestion with AWS
             Textract, developed ML models for classification/anomaly detection in Python, and
             improved data quality with pipeline cleanup. Earlier, with <b>SAP India (Edunet Foundation)</b> I
-            prototyped AI/IoT and computer-vision utilities, and at <b>Infolabz</b> I trained ML models and
+            prototyped AI/IoT and computer-vision utilities, and at <b>TechAnek</b> I trained ML models and
             delivered client-ready visualizations. I’ve also taught Python (beginner → advanced),
             which sharpened my communication and problem-solving.
           </p>

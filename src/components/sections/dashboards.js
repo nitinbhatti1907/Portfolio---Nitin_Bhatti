@@ -201,7 +201,7 @@ const DASHBOARDS = [
     title: 'Personal Finance (Power BI)',
     blurb: 'Cashflow, savings rate, category trends, and target tracking.',
     tags: ['DAX', 'Data Modeling', 'KPI'],
-    href: 'https://drive.google.com/file/d/1QstYuUGWija_QH8OHV7RFsZylvZeseRJ/view?usp=sharing',
+    href: 'https://github.com/nitinbhatti1907/PowerBI-Dashboards',
     image: '/dashboards/personal-finance.png',
   },
 ];
