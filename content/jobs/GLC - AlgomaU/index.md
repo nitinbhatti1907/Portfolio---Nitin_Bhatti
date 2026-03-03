@@ -1,5 +1,5 @@
 ---
-date: '2024-04-30'
+date: '2025-08-01'
 title: 'GLC Student Assistant & Court Assistant'
 company: 'Algoma University - GLC Center'
 location: 'Sault Ste. Marie, Ontario, Canada'
