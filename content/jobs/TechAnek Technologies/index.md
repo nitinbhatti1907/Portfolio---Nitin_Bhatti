@@ -1,5 +1,6 @@
 ---
 date: '2023-09-30'
+badge: 'TAT'
 title: 'Junior Data Analyst'
 company: 'TechAnek Technologies'
 location: 'Ahmedabad, Gujarat, India'

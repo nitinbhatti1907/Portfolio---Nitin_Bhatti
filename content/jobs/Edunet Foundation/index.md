@@ -1,5 +1,6 @@
 ---
 date: '2024-04-30'
+badge: 'SAP'
 title: 'Machine Learning, Deep Learning and IoT (Trainee)'
 company: 'SAP India'
 location: 'Ahmedabad, Gujarat, India'

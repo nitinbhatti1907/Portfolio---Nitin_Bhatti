@@ -63,8 +63,7 @@ const LogoButton = styled.button`
     letter-spacing: 0.5px;
     font-size: 14px;
     color: var(--lightest-slate);
-    background: ${({ $active }) =>
-    $active ? 'var(--green-tint)' : 'var(--light-navy)'};
+    background: ${({ $active }) => ($active ? 'var(--green-tint)' : 'var(--light-navy)')};
   }
 `;
 
@@ -219,11 +218,19 @@ const getInitials = (name = '') => {
     .split(' ')
     .filter(Boolean)
     .slice(0, 3);
+
   return parts
     .map(p => p[0])
     .join('')
     .toUpperCase()
     .slice(0, 3);
+};
+
+// Prefer frontmatter.badge (manual), fallback to initials(company)
+const getBadge = fm => {
+  const raw = (fm?.badge ?? '').toString().trim();
+  if (raw) return raw.toUpperCase().slice(0, 3);
+  return getInitials(fm?.company || '');
 };
 
 /* -------------------------------- view -------------------------------- */
@@ -240,6 +247,7 @@ const Jobs = () => {
             frontmatter {
               title
               company
+              badge
               range
               url
             }
@@ -269,10 +277,7 @@ const Jobs = () => {
   const activeFm = activeNode?.frontmatter ?? {};
   const activeHtml = activeNode?.html ?? '';
 
-  const badges = useMemo(
-    () => jobs.map(({ node }) => getInitials(node.frontmatter.company)),
-    [jobs],
-  );
+  const badges = useMemo(() => jobs.map(({ node }) => getBadge(node.frontmatter)), [jobs]);
 
   // Measure tallest panel once (and on resize) to reserve space -> prevents Projects jumping
   useEffect(() => {
@@ -286,6 +291,7 @@ const Jobs = () => {
 
     // measure after initial paint
     const id = requestAnimationFrame(measure);
+
     // re-measure on resize (debounced)
     let t = null;
     const onResize = () => {
@@ -308,16 +314,20 @@ const Jobs = () => {
       {/* Logo rail */}
       <Rail role="tablist" aria-label="Company tabs">
         {jobs.map(({ node }, i) => {
-          const fm = node.frontmatter;
+          const fm = node.frontmatter ?? {};
+          const key = `${fm.company || 'company'}-${i}`;
+
           return (
             <LogoButton
-              key={fm.company + i}
+              key={key}
+              id={`tab-${i}`}
               onClick={() => setActive(i)}
               aria-selected={active === i}
               aria-controls={`panel-${i}`}
               role="tab"
               $active={active === i}
               title={fm.company}
+              tabIndex={active === i ? 0 : -1}
             >
               <span className="badge">{badges[i]}</span>
             </LogoButton>
@@ -350,13 +360,16 @@ const Jobs = () => {
       {/* Off-screen measurer renders all panels once to find the tallest height */}
       <HiddenMeasure ref={measureRef} aria-hidden="true">
         {jobs.map(({ node }, i) => {
-          const fm = node.frontmatter;
+          const fm = node.frontmatter ?? {};
           return (
             <Panel key={`measure-${i}`}>
               <h3>
                 <span>{fm.title}</span>
                 <span className="company">
-                  &nbsp;@&nbsp;<a href={fm.url} className="inline-link">{fm.company}</a>
+                  &nbsp;@&nbsp;
+                  <a href={fm.url} className="inline-link">
+                    {fm.company}
+                  </a>
                 </span>
               </h3>
               <span className="range">{fm.range}</span>

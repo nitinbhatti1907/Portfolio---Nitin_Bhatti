@@ -1,5 +1,6 @@
 ---
 date: '2025-07-31'
+badge: 'TAT'
 title: 'Data Analyst'
 company: 'TechAnek Technologies'
 location: 'Ahmedabad, Gujarat, India (Hybrid)'

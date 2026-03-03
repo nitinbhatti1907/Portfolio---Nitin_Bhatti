@@ -1,5 +1,6 @@
 ---
 date: '2025-08-01'
+badge: 'AU'
 title: 'GLC Student Assistant & Court Assistant'
 company: 'Algoma University - GLC Center'
 location: 'Sault Ste. Marie, Ontario, Canada'

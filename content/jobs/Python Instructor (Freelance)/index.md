@@ -1,5 +1,6 @@
 ---
 date: '2025-04-30'
+badge: 'OLL'
 title: 'Python Instructor (Freelance Tutor)'
 company: 'Online Live Learning (OLL.co)'
 location: 'Remote'
