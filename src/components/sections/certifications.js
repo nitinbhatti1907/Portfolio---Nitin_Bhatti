@@ -196,6 +196,8 @@ const Actions = styled.div`
 const CERTS = [
   { title: 'PL-300 — Power BI Data Analyst', issuer: 'Microsoft', status: 'planned', date: '—',
     skills: ['Power BI', 'DAX', 'Data Modeling','Data Preprocessing'], url: '', badge: 'MS' },
+  { title: 'Data Analytics Job Simulation', issuer: 'Deloitte', status: 'completed', date: '2026',
+    skills: ['Tableau', 'Data Modeling','Data Preprocessing', 'Dashboard Creation', 'KPI Reporting'], url: 'https://drive.google.com/file/d/1a5g17wiEe83Bdf6ToN7KnI-r_2K2dqJ4/view?usp=sharing', badge: 'DTTL' },
   { title: 'Introduction to AI', issuer: 'Simplilearn', status: 'completed', date: '2024',
     skills: ['AI Basics','Generative AI','Python','ML'], url: 'https://drive.google.com/file/d/1-GOxGojiltYKCFLrB17iAhxxpPM2lQvr/view', badge: 'SL' },
   { title: 'Python for Data Science', issuer: 'Great Learning', status: 'completed', date: '2023',

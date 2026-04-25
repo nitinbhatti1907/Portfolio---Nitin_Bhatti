@@ -3,7 +3,8 @@ module.exports = {
 
   socialMedia: [
     { name: 'GitHub', url: 'https://github.com/nitinbhatti1907' },
-    { name: 'Linkedin', url: 'https://www.linkedin.com/in/bhattinitin/' }
+    { name: 'Linkedin', url: 'https://www.linkedin.com/in/bhattinitin/' },
+    { name: 'LeetCode', url: 'https://leetcode.com/u/NB1907/' },
   ],
 
   navLinks: [

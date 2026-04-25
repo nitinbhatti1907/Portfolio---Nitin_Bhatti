@@ -230,28 +230,37 @@ const About = () => {
           </StyledPic>
 
           <p>
-            I’m Nitin Bhatti, a <b>Data Analyst</b> with 2+ years of industry experience. My toolkit
-            spans Python (pandas, NumPy, scikit-learn) and BI platforms—Power BI, Metabase, and
-            Tableau—plus Excel and light backend work (Django/REST) when analytics needs an API. I
-            care about clean pipelines, trustworthy metrics, and explainable outputs that business
-            teams actually use.
+            I'm Nitin Bhatti, a <b>Data Analyst / BI Developer</b> with 2.5+ years of experience
+            turning messy data into dashboards business teams actually use. My core toolkit is
+            <b> Power BI (DAX, Power Query), SQL, and Python</b> (pandas, NumPy, scikit-learn),
+            supported by <b>Tableau, Metabase, and advanced Excel</b>. I care about clean ETL
+            pipelines, dimensional data models, trustworthy KPIs, and explainable outputs—the kind
+            that hold up in stakeholder reviews instead of needing a footnote.
           </p>
 
           <p>
-            At <b>TechAnek Technologies</b>, I built interactive KPI dashboards in Power BI/Metabase,
-            automated reporting (cutting manual effort by ~40%), implemented OCR ingestion with AWS
-            Textract, developed ML models for classification/anomaly detection in Python, and
-            improved data quality with pipeline cleanup. Earlier, with <b>SAP India (Edunet Foundation)</b> I
-            prototyped AI/IoT and computer-vision utilities, and at <b>TechAnek</b> I trained ML models and
-            delivered client-ready visualizations. I’ve also taught Python (beginner → advanced),
-            which sharpened my communication and problem-solving.
+            Currently, I work with the <b>NORDIK Institute (DATANORTH project)</b> on a remote
+            intern position, structuring <b>Northern Ontario</b> datasets across population, health,
+            weather, immigration, and community development into chart-ready indicators for a
+            redesigned public data platform. At <b>TechAnek Technologies</b>, I built Power BI and
+            Metabase dashboards that delivered 40% faster reporting and 20% fewer data
+            inconsistencies on 50,000+ records, automated recurring analytics with
+            <b> Python + SQL pipelines</b>, and tuned <b>DAX measures</b> and SQL queries to keep
+            dashboards responsive at scale. Earlier, with <b>SAP India (Edunet Foundation)</b>, I
+            prototyped AI/IoT and computer vision workflows and ran exploratory data analysis on
+            training datasets that informed cleaner model splits. Teaching <b>Python</b> to 50+
+            learners along the way sharpened how I explain technical work to non-technical
+            audiences.
           </p>
 
           <p>
-            My goal is to own end-to-end analytics—from data collection and modeling to decision-driving
-            dashboards. I’m actively building a Power BI dashboard gallery, refining DAX/SQL, and practicing
-            product-level storytelling with real datasets and scheduled refresh. I’m open to full-time roles and
-            collaborations where I can ship measurable impact fast.
+            My goal is to own analytics <b>end-to-end</b>—from requirements gathering and data
+            modeling to dashboards that drive decisions. I'm actively expanding my
+            <b> Power BI dashboard gallery</b>, deepening <b>DAX and SQL</b>, exploring
+            <b> Microsoft Fabric</b> and semantic modeling, and practicing product-level
+            storytelling with real Canadian datasets. While completing my M.Sc. in Computer
+            Science at Algoma University, I'm open to work as a <b> Data Analyst, BI Developer,
+            or Analytics Engineer roles</b> in Canada where I can ship measurable impact quickly.
           </p>
 
           <p className="skills-intro">Here are a few technologies I’ve been working with recently:</p>

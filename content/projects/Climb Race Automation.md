@@ -1,5 +1,5 @@
 ---
-serial: '10'
+serial: '06'
 title: 'Climb Race Automation'
 github: 'https://github.com/nitinbhatti1907/Climb-Race-Automation'
 external: ''

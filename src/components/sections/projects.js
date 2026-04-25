@@ -343,7 +343,22 @@ const RepoBtn = styled.a`
    =========================== */
 const PROJECTS = [
   {
-    title: 'CORAL: AI Assistant',
+    title: 'Potato Disease Classification',
+    icon: 'cog',
+    repo: 'https://nb1907-potato-disease-classification-using-cnn.hf.space/'
+  },
+  {
+    title: 'CipherFace: Biometric Password Vault',
+    icon: 'game',
+    repo: 'https://cipherface.onrender.com',
+  },
+  {
+    title: 'InsightFlow: Personal AI Tutor',
+    icon: 'news',
+    repo: 'https://insightflow-personal-ai-tutor-1.onrender.com',
+  },
+  {
+    title: 'CORAL: Personal AI Assistant',
     icon: 'coral',
     repo: 'https://github.com/nitinbhatti1907/CORAL-AI-personalized-learning-assistant',
   },
@@ -351,21 +366,6 @@ const PROJECTS = [
     title: 'Jarvis-AI',
     icon: 'star',
     repo: 'https://github.com/nitinbhatti1907/Jarvis-AI',
-  },
-  {
-    title: 'Climb Race Automation',
-    icon: 'game',
-    repo: 'https://github.com/nitinbhatti1907/Climb-Race-Automation',
-  },
-  {
-    title: 'Social Media App-Backend',
-    icon: 'cog',
-    repo: 'https://github.com/nitinbhatti1907/Social-Media-Application-Backend',
-  },
-  {
-    title: 'Digital News Paper GUI',
-    icon: 'news',
-    repo: 'https://github.com/nitinbhatti1907/Digital-News-Paper-GUI',
   },
 ];
 

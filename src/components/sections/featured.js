@@ -418,6 +418,15 @@ const Row = styled.article`
 /* ===== Data ===== */
 const FEATURED = [
   {
+    title: 'Canadian Superstore Analytics Hub',
+    desc:
+      'An interactive sales analytics dashboard built on the Canadian Superstore dataset. Filter by date, region, category, and segment - every chart and KPI updates live.',
+    tech: ['Python', 'Pandas', 'FastAPI', 'SQL-style Aggregations'],
+    href: 'https://canadian-superstore-analytics-hub.netlify.app/',
+    repo: 'https://github.com/nitinbhatti1907/Canadian-Superstore-Analytics-Hub',
+    image: shot2,
+  },
+  {
     title: 'House Price Prediction',
     desc:
       'Engineered and deployed a real-time ML app using scikit-learn and FastAPI, achieving accurate predictions with structured statistical validation (GroupKFold, prediction intervals).',
@@ -434,16 +443,7 @@ const FEATURED = [
     href: 'https://nb1907-potato-disease-classification-using-cnn.hf.space/',
     repo: 'https://github.com/nitinbhatti1907/Potato-Disease-Classification-Using-CNN',
     image: shot3,
-  },
-  {
-    title: 'Medical OCR Analyzer',
-    desc:
-      'Used OCR and Python to extract structured data from unstructured text documents, enabling pattern identification, trend communication,and statistical insight generation.',
-    tech: ['Python', 'Azure - OCR', 'Groq AI - Llama 3', 'Django', 'Git', 'Render'],
-    href: 'https://medical-ocr-analyzer.onrender.com/',
-    repo: 'https://github.com/nitinbhatti1907/Medical-OCR-Analyzer',
-    image: shot2,
-  },
+  }
 ];
 
 const Featured = () => {

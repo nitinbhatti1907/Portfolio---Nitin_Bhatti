@@ -1,5 +1,5 @@
 ---
-serial: '08'
+serial: '10'
 title: 'Covid-19 Notifier'
 github: 'https://github.com/nitinbhatti1907/Covid-19-Notifier'
 external: ''

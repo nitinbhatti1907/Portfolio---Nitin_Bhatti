@@ -1,5 +1,5 @@
 ---
-serial: '06'
+serial: '07'
 title: 'Digital News Paper GUI'
 github: 'https://github.com/nitinbhatti1907/Digital-News-Paper-GUI'
 external: ''
