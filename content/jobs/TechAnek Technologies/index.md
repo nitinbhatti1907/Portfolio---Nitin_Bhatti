@@ -1,13 +1,11 @@
 ---
-date: '2023-09-30'
+date: '2023-07-01'
 badge: 'TAT'
-title: 'Junior Data Analyst'
+title: 'Intern - Analyst'
 company: 'TechAnek Technologies'
-location: 'Ahmedabad, Gujarat, India'
-range: 'July 2023 — December 2023 (6 Months)'
+location: 'India'
+range: 'Jul 2023 — Dec 2023'
 url: 'https://techanek.com/'
 ---
 ****
-- Over a **6-month engagement**, standardized month-end numbers for stakeholder sign-offs by rebuilding the **Power BI model** and writing reusable **DAX** measures with quick reconciliation checks, reducing rework and keeping reporting consistent across recurring exports.
-- Enabled self-serve breakdowns for weekly reviews by creating curated **SQL views (joins/CTEs)** and publishing **Tableau** workbooks with parameters and drill paths, cutting follow-up data requests and speeding up analysis iterations.
-- Strengthened refresh reliability across recurring updates by using **Python (pandas) to clean merges, remove duplicates, handle missing values, and validate outputs** before pushing updates on the **BI tools (Power BI and Tableau)**.
+- Reduced month-end reporting rework by approximately **30%** by rebuilding the **Power BI** model with **20+ DAX measures** and **5+ Tableau workbooks** on SQL views using **CTEs** and **joins**, hardened with **Pandas** validation, Git, and Jira.
