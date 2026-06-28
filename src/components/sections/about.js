@@ -230,38 +230,41 @@ const About = () => {
           </StyledPic>
 
           <p>
-            I'm Nitin Bhatti, a <b>Data Analyst / BI Developer</b> with 2.5+ years of experience
-            turning messy data into dashboards business teams actually use. My core toolkit is
-            <b> Power BI (DAX, Power Query), SQL, and Python</b> (pandas, NumPy, scikit-learn),
-            supported by <b>Tableau, Metabase, and advanced Excel</b>. I care about clean ETL
-            pipelines, dimensional data models, trustworthy KPIs, and explainable outputs—the kind
-            that hold up in stakeholder reviews instead of needing a footnote.
+            I'm Nitin Bhatti, a <b>Data Analyst / BI Developer</b> with 3 years of experience
+            turning complex operational data into reporting models and dashboards that business teams
+            can actually use. My core toolkit is <b>Power BI (DAX, Power Query), SQL, and Python </b>
+            (pandas, NumPy, scikit-learn), supported by <b>Azure Data Factory, Azure SQL, Tableau,
+              Metabase, and advanced Excel</b>. I focus on clean ETL pipelines, dimensional data models,
+            reliable KPIs, and data-quality checks so the final output is useful in real stakeholder
+            reviews — not just visually polished.
           </p>
 
           <p>
-            Currently, I work with the <b>NORDIK Institute (DATANORTH project)</b> on a remote
-            intern position, structuring <b>Northern Ontario</b> datasets across population, health,
-            weather, immigration, and community development into chart-ready indicators for a
-            redesigned public data platform. At <b>TechAnek Technologies</b>, I built Power BI and
-            Metabase dashboards that delivered 40% faster reporting and 20% fewer data
-            inconsistencies on 50,000+ records, automated recurring analytics with
-            <b> Python + SQL pipelines</b>, and tuned <b>DAX measures</b> and SQL queries to keep
-            dashboards responsive at scale. Earlier, with <b>SAP India (Edunet Foundation)</b>, I
-            prototyped AI/IoT and computer vision workflows and ran exploratory data analysis on
-            training datasets that informed cleaner model splits. Teaching <b>Python</b> to 50+
-            learners along the way sharpened how I explain technical work to non-technical
-            audiences.
+            Currently, I work as a <b>Data Analyst at Dell Technologies</b>, where I consolidate
+            healthcare operational data from <b>Azure SQL Database</b> into curated
+            <b> Azure Data Lake</b> datasets and build Power BI reporting for patient wait times,
+            referral backlogs, appointment utilization, discharge turnaround, and provider activity.
+            Earlier at <b>HCLTech</b>, I built centralized insurance reporting models, delivered
+            <b> 18+ Power BI dashboards</b>, automated daily ingestion using <b>Python, SQL, and
+              Azure Data Factory</b>, and improved reporting performance through CTEs, indexed joins,
+            and star-schema design. I also supported data validation, Power Query transformations,
+            and DAX-based scorecards as a Junior Analyst. At <b>TechAnek Technologies</b>, I reduced
+            month-end reporting rework by rebuilding Power BI models, creating reusable DAX measures,
+            and developing <b>Tableau</b> workbooks and <b>Metabase</b> dashboards on SQL-based datasets.
           </p>
 
           <p>
-            My goal is to own analytics <b>end-to-end</b>—from requirements gathering and data
-            modeling to dashboards that drive decisions. I'm actively expanding my
-            <b> Power BI dashboard gallery</b>, deepening <b>DAX and SQL</b>, exploring
-            <b> Microsoft Fabric</b> and semantic modeling, and practicing product-level
-            storytelling with real Canadian datasets. While completing my M.Sc. in Computer
-            Science at Algoma University, I'm open to work as a <b> Data Analyst, BI Developer,
-            or Analytics Engineer roles</b> in Canada where I can ship measurable impact quickly.
+            My goal is to own analytics <b>end-to-end </b> from gathering reporting requirements and
+            validating source data to building scalable semantic models and dashboards that support
+            faster decisions. I'm actively deepening my knowledge of <b>Power BI, DAX, SQL, Tableau,
+              Metabase, Microsoft Fabric, Azure data services, and semantic modeling</b>, while improving
+            how I communicate insights to technical and non-technical stakeholders. I completed my
+            M.Sc. in Computer Science at Algoma University and I'm open to <b>Data Analyst, BI Developer,
+              and Analytics Engineer</b> roles in Canada where I can contribute to reliable,
+            business-focused analytics solutions.
           </p>
+
+
 
           <p className="skills-intro">Here are a few technologies I’ve been working with recently:</p>
 
