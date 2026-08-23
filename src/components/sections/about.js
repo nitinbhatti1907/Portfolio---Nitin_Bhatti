@@ -230,7 +230,7 @@ const About = () => {
           </StyledPic>
 
           <p>
-            I'm Nitin Bhatti, a <b>Data Analyst / BI Developer</b> with 3 years of experience
+            I'm Nitin Bhatti, a <b>Data Analyst / BI Developer</b> with 3+ years of experience
             turning complex operational data into reporting models and dashboards that business teams
             can actually use. My core toolkit is <b>Power BI (DAX, Power Query), SQL, and Python </b>
             (pandas, NumPy, scikit-learn), supported by <b>Azure Data Factory, Azure SQL, Tableau,
@@ -253,7 +253,7 @@ const About = () => {
             and developing <b>Tableau</b> workbooks and <b>Metabase</b> dashboards on SQL-based datasets.
           </p>
 
-          <p>
+          <p>                     
             My goal is to own analytics <b>end-to-end </b> from gathering reporting requirements and
             validating source data to building scalable semantic models and dashboards that support
             faster decisions. I'm actively deepening my knowledge of <b>Power BI, DAX, SQL, Tableau,
