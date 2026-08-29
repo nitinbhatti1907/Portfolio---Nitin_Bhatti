@@ -418,6 +418,15 @@ const Row = styled.article`
 /* ===== Data ===== */
 const FEATURED = [
   {
+    title: 'DataNorth',
+    desc:
+      'A Northern Ontario public-data platform built with NORDIK Institute, covering 53 indicators across 10 categories and 6 communities with interactive dashboards and Statistics Canada data.',
+    tech: ['Apache ECharts', 'Data Modeling', 'KPI Reporting', 'Statistics Canada Data'],
+    href: 'https://datanorth.vercel.app/en',
+    repo: 'https://github.com/nitinbhatti1907/DATANORTH',
+    image: shot3,
+  },
+  {
     title: 'Canadian Superstore Analytics Hub',
     desc:
       'An interactive sales analytics dashboard built on the Canadian Superstore dataset. Filter by date, region, category, and segment - every chart and KPI updates live.',
@@ -434,16 +443,16 @@ const FEATURED = [
     href: 'https://nb1907-house-price-prediction.hf.space/',
     repo: 'https://github.com/nitinbhatti1907/house-price-prediction',
     image: shot1,
-  },
-  {
-    title: 'Potato Disease Classification',
-    desc:
-      'Deep learning model to classify potato leaf diseases from images; highlights end-to-end pipeline thinking and ML deployment awareness.',
-    tech: ['Python', 'TensorFlow/Keras', 'Computer Vision', 'FastAPI', 'React'],
-    href: 'https://nb1907-potato-disease-classification-using-cnn.hf.space/',
-    repo: 'https://github.com/nitinbhatti1907/Potato-Disease-Classification-Using-CNN',
-    image: shot3,
   }
+  // {
+  //   title: 'Potato Disease Classification',
+  //   desc:
+  //     'Deep learning model to classify potato leaf diseases from images; highlights end-to-end pipeline thinking and ML deployment awareness.',
+  //   tech: ['Python', 'TensorFlow/Keras', 'Computer Vision', 'FastAPI', 'React'],
+  //   href: 'https://nb1907-potato-disease-classification-using-cnn.hf.space/',
+  //   repo: 'https://github.com/nitinbhatti1907/Potato-Disease-Classification-Using-CNN',
+  //   image: shot3,
+  // }
 ];
 
 const Featured = () => {

@@ -7,7 +7,13 @@ location: 'India'
 range: 'Jan 2024 — May 2024'
 url: 'https://www.hcltech.com/'
 ---
-****
-- Prepared reporting datasets by consolidating policy, customer, and claims information from **SQL Server**, **MySQL**, and **PostgreSQL**, improving source-data consistency by **7%** before BI development.
-- Performed automated data-quality checks using **Python (Pandas)** and **SQL** to identify duplicate policies, missing customer attributes, and premium mismatches, reducing reporting defects by approximately **10%**.
-- Assisted in developing **Power BI** operational scorecards by creating SQL datasets, **Power Query** transformations, and **DAX** measures for underwriting and claims KPIs, shortening report delivery by **2.5%**.
+
+- **SQL & Data Preparation:** Improved reporting-data consistency by **7%** by consolidating policy, customer, premium, and claims data from **SQL Server, MySQL, and PostgreSQL** into reusable reporting datasets using joins, CTEs, and transformation logic.
+
+- **Python & Data Quality:** Reduced reporting defects by approximately **10%** by automating validation and reconciliation checks with **Python, Pandas, and SQL** for duplicate policies, missing customer attributes, premium mismatches, and incomplete claims records.
+
+- **Power BI & KPI Reporting:** Accelerated recurring report delivery by developing operational scorecards using **Power BI, Power Query, DAX, and SQL** for underwriting, claims, policy, and renewal KPIs.
+
+- **Ad Hoc Analysis & Excel:** Supported underwriting teams with **trend, variance, and exception analysis** using SQL and Excel to investigate policy performance, claims activity, and recurring reporting discrepancies.
+
+- **Requirements & Reporting Support:** Translated business reporting requests into reusable datasets, KPI definitions, and dashboard updates while supporting validation, documentation, and recurring report refreshes.

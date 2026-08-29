@@ -7,7 +7,13 @@ location: 'India'
 range: 'Jul 2023 — Dec 2023'
 url: 'https://techanek.com/'
 ---
-****
-- Cut reporting cycle time by 40% and data inconsistencies by **20%** across **5+** business teams by rebuilding the Power BI semantic layer, standardizing KPIs, and adding DAX-level reconciliation checks on **50,000+ data points**.
-- Reduced month-end reporting rework by approximately **30%** by rebuilding the **Power BI** model with **20+ DAX measures** and **5+ Tableau workbooks** on SQL views using **CTEs** and **joins**, hardened with **Pandas** validation, Git, and Jira.
-- **Maintained sub-3-second dashboard load times** as KPIs and filter combinations scaled, by tuning **SQL queries (CTEs, indexed joins, window functions) and refactoring data models — without losing metric accuracy**.
+
+- **SSRS & Operational Reporting:** Reduced recurring reporting cycle time by **40% across 5+ business teams** by developing standardized **SSRS reports** and reusable reporting datasets on **SQL Server**.
+
+- **SQL & Data Modeling:** Reduced month-end reporting rework by approximately **30%** by rebuilding SQL-based reporting models using **CTEs, joins, window functions, and reusable views** across **50K+ reporting records**.
+
+- **SSIS & ETL Automation:** Improved reporting-data consistency by **20%** by automating recurring extraction, transformation, and loading workflows with **SSIS** and implementing source-to-report validation checks.
+
+- **Excel & Data Reconciliation:** Validated monthly KPIs using **Excel, pivot tables, lookup-based checks, and reconciliation rules**, identifying data mismatches before reports were distributed to business users.
+
+- **Performance & Agile Delivery:** Maintained **sub-3-second report response times** by optimizing indexed SQL queries and reporting models while managing enhancements through **Git, GitHub, Jira, and Agile/Scrum** workflows.

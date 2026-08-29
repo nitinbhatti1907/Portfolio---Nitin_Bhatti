@@ -230,41 +230,50 @@ const About = () => {
           </StyledPic>
 
           <p>
-            I'm Nitin Bhatti, a <b>Data Analyst / BI Developer</b> with 3+ years of experience
-            turning complex operational data into reporting models and dashboards that business teams
-            can actually use. My core toolkit is <b>Power BI (DAX, Power Query), SQL, and Python </b>
-            (pandas, NumPy, scikit-learn), supported by <b>Azure Data Factory, Azure SQL, Tableau,
-              Metabase, and advanced Excel</b>. I focus on clean ETL pipelines, dimensional data models,
-            reliable KPIs, and data-quality checks so the final output is useful in real stakeholder
-            reviews — not just visually polished.
+            I'm Nitin Bhatti, a <b>Data Analyst / Business Intelligence Analyst</b> with 3+ years of experience
+            turning complex business and operational data into <b>BI dashboards, KPI reporting, and actionable insights</b>.
+            My core toolkit includes <b>Power BI, SQL, Python, and Azure</b>, supported by
+            <b>DAX, Power Query, Tableau, Azure Data Factory, Microsoft Fabric, Snowflake, and Excel</b>.
+            I work across the analytics lifecycle, including <b>data extraction, cleaning, validation, transformation,
+              dimensional modeling, dashboard development, and ad hoc analysis</b>, with a focus on improving reporting
+            efficiency, data quality, and business decision-making.
           </p>
 
           <p>
-            Currently, I work as a <b>Data Analyst at Dell Technologies</b>, where I consolidate
-            healthcare operational data from <b>Azure SQL Database</b> into curated
-            <b> Azure Data Lake</b> datasets and build Power BI reporting for patient wait times,
-            referral backlogs, appointment utilization, discharge turnaround, and provider activity.
-            Earlier at <b>HCLTech</b>, I built centralized insurance reporting models, delivered
-            <b> 18+ Power BI dashboards</b>, automated daily ingestion using <b>Python, SQL, and
-              Azure Data Factory</b>, and improved reporting performance through CTEs, indexed joins,
-            and star-schema design. I also supported data validation, Power Query transformations,
-            and DAX-based scorecards as a Junior Analyst. At <b>TechAnek Technologies</b>, I reduced
-            month-end reporting rework by rebuilding Power BI models, creating reusable DAX measures,
-            and developing <b>Tableau</b> workbooks and <b>Metabase</b> dashboards on SQL-based datasets.
+            Currently, I work as a <b>Data Analyst at Dell Technologies</b>, where I support healthcare analytics by
+            integrating operational data from <b>Azure SQL Database</b> into <b>Azure Data Lake and Microsoft Fabric</b>,
+            developing Power BI reporting for patient wait times, referral backlogs, appointment utilization,
+            discharge turnaround, and provider performance. I also work with <b>DAX, Power Query, semantic models,
+              Row-Level Security, scheduled refresh, Python, and Pandas</b> to improve reporting reliability,
+            automate validation, and support cross-functional clinical reporting.
           </p>
 
-          <p>                     
-            My goal is to own analytics <b>end-to-end </b> from gathering reporting requirements and
-            validating source data to building scalable semantic models and dashboards that support
-            faster decisions. I'm actively deepening my knowledge of <b>Power BI, DAX, SQL, Tableau,
-              Metabase, Microsoft Fabric, Azure data services, and semantic modeling</b>, while improving
-            how I communicate insights to technical and non-technical stakeholders. I completed my
-            M.Sc. in Computer Science at Algoma University and I'm open to <b>Data Analyst, BI Developer,
-              and Analytics Engineer</b> roles in Canada where I can contribute to reliable,
-            business-focused analytics solutions.
+          <p>
+            Previously, as a <b>Business Intelligence Analyst at HCLTech</b>, I worked with insurance and underwriting
+            data across policy, claims, renewal, broker, and premium reporting. I developed
+            <b>18+ BI dashboards</b>, automated recurring data preparation using <b>Python, SQL, and ETL workflows</b>,
+            and improved reporting performance through <b>CTEs, joins, window functions, query optimization,
+              and star-schema modeling</b>. I also performed <b>EDA, statistical analysis, data reconciliation,
+                and ad hoc analysis</b> to identify trends, reporting exceptions, premium leakage, and renewal patterns
+            for business stakeholders.
           </p>
 
+          <p>
+            Earlier at <b>TechAnek Technologies</b>, I supported operational and month-end reporting using
+            <b>SQL Server, SSIS, SSRS, Excel, and SQL-based reporting models</b>. I worked on recurring report automation,
+            source-to-report reconciliation, reusable SQL queries, data validation, and reporting enhancements while
+            collaborating through <b>Jira, Git, GitHub, and Agile/Scrum</b> workflows.
+          </p>
 
+          <p>
+            My goal is to deliver analytics <b>end-to-end</b> — from gathering business requirements and validating
+            source data to building reliable data models, dashboards, KPIs, and reporting solutions that help
+            stakeholders make better decisions. I'm continuing to deepen my expertise in
+            <b>Power BI, SQL, Python, Azure, Microsoft Fabric, Tableau, data modeling, and business analytics</b>.
+            I completed my M.Sc. in Computer Science at Algoma University and I'm open to
+            <b>Data Analyst, Business Intelligence Analyst, BI Analyst, Reporting Analyst, Power BI Analyst,
+              and related BI & Analytics roles</b> in Canada.
+          </p>
 
           <p className="skills-intro">Here are a few technologies I’ve been working with recently:</p>
 
