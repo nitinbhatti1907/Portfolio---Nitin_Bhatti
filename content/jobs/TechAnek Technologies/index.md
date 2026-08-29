@@ -1,7 +1,7 @@
 ---
 date: '2023-07-01'
 badge: 'TAT'
-title: 'Intern - Analyst'
+title: 'Business Intelligence Intern'
 company: 'TechAnek Technologies'
 location: 'India'
 range: 'Jul 2023 — Dec 2023'

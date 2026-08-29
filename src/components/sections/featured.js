@@ -418,9 +418,9 @@ const Row = styled.article`
 /* ===== Data ===== */
 const FEATURED = [
   {
-    title: 'DataNorth',
+    title: 'DataNorth - A Public Data Platform',
     desc:
-      'A Northern Ontario public-data platform built with NORDIK Institute, covering 53 indicators across 10 categories and 6 communities with interactive dashboards and Statistics Canada data.',
+      'A Northern Ontario public-data platform, covering 53 indicators across 10 categories and 6 communities with interactive dashboards and Statistics Canada data.',
     tech: ['Apache ECharts', 'Data Modeling', 'KPI Reporting', 'Statistics Canada Data'],
     href: 'https://datanorth.vercel.app/en',
     repo: 'https://github.com/nitinbhatti1907/DATANORTH',

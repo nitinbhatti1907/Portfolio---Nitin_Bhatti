@@ -1,7 +1,7 @@
 ---
 date: '2024-01-01'
 badge: 'HCL'
-title: 'Junior Analyst'
+title: 'Business Intelligence Analyst'
 company: 'HCLTech'
 location: 'India'
 range: 'Jan 2024 — May 2024'
