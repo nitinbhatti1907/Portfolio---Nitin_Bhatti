@@ -251,7 +251,7 @@ const About = () => {
           <p>
             Previously, as a <b>Business Intelligence Analyst at HCLTech</b>, I worked with insurance and underwriting
             data across policy, claims, renewal, broker, and premium reporting. I developed
-            <b>18+ BI dashboards</b>, automated recurring data preparation using <b>Python, SQL, and ETL workflows</b>,
+             <b>18+ BI dashboards</b>, automated recurring data preparation using <b>Python, SQL, and ETL workflows</b>,
             and improved reporting performance through <b>CTEs, joins, window functions, query optimization,
               and star-schema modeling</b>. I also performed <b>EDA, statistical analysis, data reconciliation,
                 and ad hoc analysis</b> to identify trends, reporting exceptions, premium leakage, and renewal patterns
@@ -260,7 +260,7 @@ const About = () => {
 
           <p>
             Earlier at <b>TechAnek Technologies</b>, I supported operational and month-end reporting using
-            <b>SQL Server, SSIS, SSRS, Excel, and SQL-based reporting models</b>. I worked on recurring report automation,
+             <b>SQL Server, SSIS, SSRS, Excel, and SQL-based reporting models</b>. I worked on recurring report automation,
             source-to-report reconciliation, reusable SQL queries, data validation, and reporting enhancements while
             collaborating through <b>Jira, Git, GitHub, and Agile/Scrum</b> workflows.
           </p>
@@ -269,9 +269,9 @@ const About = () => {
             My goal is to deliver analytics <b>end-to-end</b> — from gathering business requirements and validating
             source data to building reliable data models, dashboards, KPIs, and reporting solutions that help
             stakeholders make better decisions. I'm continuing to deepen my expertise in
-            <b>Power BI, SQL, Python, Azure, Microsoft Fabric, Tableau, data modeling, and business analytics</b>.
+             <b>Power BI, SQL, Python, Azure, Microsoft Fabric, Tableau, data modeling, and business analytics</b>.
             I completed my M.Sc. in Computer Science at Algoma University and I'm open to
-            <b>Data Analyst, Business Intelligence Analyst, BI Analyst, Reporting Analyst, Power BI Analyst,
+             <b>Data Analyst, Business Intelligence Analyst, BI Analyst, Reporting Analyst, Power BI Analyst,
               and related BI & Analytics roles</b> in Canada.
           </p>
 
