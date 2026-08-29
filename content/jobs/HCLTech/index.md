@@ -4,7 +4,7 @@ badge: 'HCL'
 title: 'Business Intelligence Analyst'
 company: 'HCLTech'
 location: 'India'
-range: 'Jan 2024 — May 2024'
+range: 'Jan 2024 — Aug 2025'
 url: 'https://www.hcltech.com/'
 ---
 

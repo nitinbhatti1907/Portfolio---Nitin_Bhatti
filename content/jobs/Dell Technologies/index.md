@@ -3,8 +3,8 @@ date: '2025-10-01'
 badge: 'DT'
 title: 'Data Analyst'
 company: 'Dell Technologies'
-location: 'Remote, Canada'
-range: 'Oct 2025 — Present'
+location: 'Canada'
+range: 'Sept 2025 — Present'
 url: 'https://www.dell.com/en-ca'
 ---
 
