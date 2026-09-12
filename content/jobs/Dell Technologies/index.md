@@ -1,19 +1,27 @@
 ---
-date: '2025-10-01'
+date: '2025-09-01'
+
 badge: 'DT'
+
 title: 'Data Analyst'
+
 company: 'Dell Technologies'
+
 location: 'Canada'
+
 range: 'Sept 2025 — Present'
+
 url: 'https://www.dell.com/en-ca'
 ---
 
-- **Power BI & Clinical Reporting:** Built interactive dashboards and KPI reporting for patient wait times, referral backlogs, appointment utilization, discharge turnaround, and provider performance using **Power BI, DAX, Power Query, and Power BI Service**.
+- Partner with **finance, operations, supply chain, and engineering teams** to translate requirements into scalable **BI solutions**.
 
-- **Azure ETL & Data Integration:** Reduced manual reconciliation by **15%** by integrating ADT, appointment, referral, laboratory, and provider data from **Azure SQL Database** into curated **Azure Data Lake and Microsoft Fabric** datasets through **Azure Data Factory** pipelines.
+- Build **Power BI and Tableau dashboards**, **semantic models**, **DAX measures**, and **KPI frameworks** for business reporting.
 
-- **Python & Data Quality:** Reduced reporting exceptions by **5%** by using **Python, Pandas, and validation rules** to identify duplicate MRNs, incomplete encounters, inactive provider IDs, and invalid diagnosis mappings before scheduled dashboard refreshes.
+- Develop advanced **SQL queries** and **Azure Data Factory pipelines** across **CRM, ERP, and enterprise data sources**.
 
-- **SQL & Dimensional Modeling:** Accelerated cross-functional reporting by **20%** by restructuring EHR data into **star-schema semantic models** with patient, encounter, provider, and appointment dimensions while optimizing reusable SQL transformations.
+- Perform **data validation, reconciliation, trend analysis, and root-cause analysis** to improve reporting quality.
 
-- **KPI Governance & Business Analysis:** Partnered with clinical informatics stakeholders to translate reporting requirements into standardized KPIs for emergency visits, readmissions, referral completion, and appointment adherence, supporting reliable **ad hoc analysis and operational decision-making**.
+- Automate recurring reports using **Python, SQL, Excel, and Power Automate**, reducing reporting turnaround by **40%**.
+
+- Analyze **budgets, costs, variances, and forecasts** to identify risks, inefficiencies, and cost-optimization opportunities.

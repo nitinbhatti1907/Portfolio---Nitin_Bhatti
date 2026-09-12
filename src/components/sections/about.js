@@ -231,47 +231,51 @@ const About = () => {
 
           <p>
             I'm Nitin Bhatti, a <b>Data Analyst / Business Intelligence Analyst</b> with 3+ years of experience
-            turning complex business and operational data into <b>BI dashboards, KPI reporting, and actionable insights</b>.
-            My core toolkit includes <b>Power BI, SQL, Python, and Azure</b>, supported by{' '}
-            <b>DAX, Power Query, Tableau, Azure Data Factory, Microsoft Fabric, Snowflake, and Excel</b>.
+            transforming complex business data into <b>dashboards, reporting solutions, and actionable insights</b>.
+            My core toolkit includes <b>SQL, Power BI, Tableau, Python, and cloud data platforms</b>, supported by{' '}
+            <b>DAX, Power Query, Azure Data Factory, Microsoft Fabric, Snowflake, Excel, and Power Automate</b>.
             I work across the analytics lifecycle, including{' '}
-            <b>data extraction, cleaning, validation, transformation, dimensional modeling, dashboard development, and ad hoc analysis</b>,
-            with a focus on improving reporting efficiency, data quality, and business decision-making.
+            <b>data modeling, ETL, KPI development, data quality, statistical analysis, reporting automation, and business requirements</b>,
+            with a focus on building scalable analytics solutions that support better decision-making.
           </p>
 
           <p>
-            Currently, I work as a <b>Data Analyst at Dell Technologies</b>, where I support healthcare analytics by
-            integrating operational data from <b>Azure SQL Database</b> into <b>Azure Data Lake and Microsoft Fabric</b>,
-            developing Power BI reporting for patient wait times, referral backlogs, appointment utilization,
-            discharge turnaround, and provider performance. I also work with{' '}
-            <b>DAX, Power Query, semantic models, Row-Level Security, scheduled refresh, Python, and Pandas</b>{' '}
-            to improve reporting reliability, automate validation, and support cross-functional clinical reporting.
+            Currently, I work as a <b>Data Analyst at Dell Technologies</b>, where I partner with{' '}
+            <b>finance, operations, supply chain, and engineering teams</b> to translate business requirements into scalable BI solutions.
+            I build <b>Power BI and Tableau dashboards, semantic models, DAX measures, and KPI frameworks</b>,
+            develop advanced <b>SQL queries and Azure Data Factory pipelines</b> across CRM, ERP, and enterprise data sources,
+            and perform <b>data validation, reconciliation, trend analysis, and root-cause analysis</b> to improve reporting quality.
+            I also automate recurring reporting using <b>Python, SQL, Excel, and Power Automate</b> and analyze
+            budgets, costs, variances, and forecasts to identify risks and optimization opportunities.
           </p>
 
           <p>
-            Previously, as a <b>Business Intelligence Analyst at HCLTech</b>, I worked with insurance and underwriting
-            data across policy, claims, renewal, broker, and premium reporting. I developed{' '}
-            <b>18+ BI dashboards</b>, automated recurring data preparation using{' '}
-            <b>Python, SQL, and ETL workflows</b>, and improved reporting performance through{' '}
-            <b>CTEs, joins, window functions, query optimization, and star-schema modeling</b>. I also performed{' '}
-            <b>EDA, statistical analysis, data reconciliation, and ad hoc analysis</b> to identify trends,
-            reporting exceptions, premium leakage, and renewal patterns for business stakeholders.
+            Previously, as a <b>Business Intelligence Analyst at HCLTech</b>, I built{' '}
+            <b>Power BI and Tableau dashboards</b> for KPI tracking, business performance, and operational reporting.
+            I developed and optimized <b>SQL queries, views, and datasets</b> across
+            <b> PostgreSQL, MySQL, and Snowflake</b>, and automated ETL and reporting using{' '}
+            <b>Python, Pandas, SQL, AWS S3, and AWS Glue</b>.
+            I also performed <b>EDA, regression, forecasting, and root-cause analysis</b>,
+            partnered with stakeholders on <b>KPI definitions, UAT, data validation, DAX standards, and self-service BI reporting</b>,
+            and analyzed <b>10M+ records</b> using advanced SQL to identify trends, anomalies, and actionable insights.
           </p>
 
           <p>
-            Earlier at <b>TechAnek Technologies</b>, I supported operational and month-end reporting using{' '}
-            <b>SQL Server, SSIS, SSRS, Excel, and SQL-based reporting models</b>. I worked on recurring report automation,
-            source-to-report reconciliation, reusable SQL queries, data validation, and reporting enhancements while
-            collaborating through <b>Jira, Git, GitHub, and Agile/Scrum</b> workflows.
+            Earlier at <b>TechAnek Technologies</b>, I developed standardized{' '}
+            <b>SSRS reports and SQL Server datasets</b>, built SQL models using{' '}
+            <b>CTEs, joins, window functions, and reusable views</b>, and automated ETL and validation workflows using{' '}
+            <b>SSIS and Excel</b>. I also built <b>Metabase dashboards and ad hoc reports</b>,
+            optimized SQL, and gathered business requirements to translate them into
+            reusable datasets, dashboards, and reports.
           </p>
 
           <p>
-            My goal is to deliver analytics <b>end-to-end</b> — from gathering business requirements and validating
-            source data to building reliable data models, dashboards, KPIs, and reporting solutions that help
-            stakeholders make better decisions. I'm continuing to deepen my expertise in{' '}
-            <b>Power BI, SQL, Python, Azure, Microsoft Fabric, Tableau, data modeling, and business analytics</b>.
-            I completed my M.Sc. in Computer Science at Algoma University and I'm open to{' '}
-            <b>Data Analyst, Business Intelligence Analyst, BI Analyst, Reporting Analyst, Power BI Analyst, and related BI & Analytics roles</b>{' '}
+            My goal is to deliver analytics <b>end-to-end</b> — from understanding business requirements and validating data
+            to developing reliable models, dashboards, KPIs, and reporting solutions that help stakeholders make better decisions.
+            I'm continuing to deepen my expertise in{' '}
+            <b>Power BI, SQL, Python, Tableau, cloud analytics, data modeling, and business intelligence</b>.
+            I completed my <b>M.Sc. in Computer Science at Algoma University</b> and I'm open to{' '}
+            <b>Data Analyst, Business Intelligence Analyst, BI Analyst, Reporting Analyst, Power BI Analyst, and related Analytics roles</b>{' '}
             in Canada.
           </p>
 

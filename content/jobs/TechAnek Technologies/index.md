@@ -1,19 +1,25 @@
 ---
 date: '2023-07-01'
+
 badge: 'TAT'
+
 title: 'Business Intelligence Intern'
+
 company: 'TechAnek Technologies'
+
 location: 'India'
+
 range: 'Jul 2023 — Dec 2023'
+
 url: 'https://techanek.com/'
 ---
 
-- **SSRS & Operational Reporting:** Reduced recurring reporting cycle time by **40% across 5+ business teams** by developing standardized **SSRS reports** and reusable reporting datasets on **SQL Server**.
+- Developed standardized **SSRS reports and SQL Server datasets** for **5+ teams**, cutting reporting cycle time by **40%**.
 
-- **SQL & Data Modeling:** Reduced month-end reporting rework by approximately **30%** by rebuilding SQL-based reporting models using **CTEs, joins, window functions, and reusable views** across **50K+ reporting records**.
+- Built **SQL models** using **CTEs, joins, window functions, and reusable views** across **50K+ records**.
 
-- **SSIS & ETL Automation:** Improved reporting-data consistency by **20%** by automating recurring extraction, transformation, and loading workflows with **SSIS** and implementing source-to-report validation checks.
+- Automated **ETL and validation workflows** using **SSIS and Excel**, reducing month-end reporting rework by **~30%**.
 
-- **Excel & Data Reconciliation:** Validated monthly KPIs using **Excel, pivot tables, lookup-based checks, and reconciliation rules**, identifying data mismatches before reports were distributed to business users.
+- Built **Metabase dashboards and ad hoc reports** while optimizing **SQL** and delivering updates through **Jira and Git**.
 
-- **Performance & Agile Delivery:** Maintained **sub-3-second report response times** by optimizing indexed SQL queries and reporting models while managing enhancements through **Git, GitHub, Jira, and Agile/Scrum** workflows.
+- Gathered **business requirements** and translated them into **reusable datasets, dashboards, and reports**.
