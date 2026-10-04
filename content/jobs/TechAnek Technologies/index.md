@@ -3,7 +3,7 @@ date: '2023-07-01'
 
 badge: 'TAT'
 
-title: 'Business Intelligence Intern'
+title: 'Business Intelligence Developer
 
 company: 'TechAnek Technologies'
 
